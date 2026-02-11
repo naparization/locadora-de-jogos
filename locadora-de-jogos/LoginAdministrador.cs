@@ -16,5 +16,20 @@ namespace locadora_de_jogos
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "Admin" && txtSenha.Text == "1234")
+            {
+                TelaInicial telaInicial = new TelaInicial(true);
+                this.Hide();
+                telaInicial.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Login ou Senha incorretos.", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                
+            
+        }
     }
 }

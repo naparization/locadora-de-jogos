@@ -4,7 +4,7 @@ namespace locadora_de_jogos
     {
         public TelaLogin()
         {
-            
+
             InitializeComponent();
         }
 
@@ -25,24 +25,35 @@ namespace locadora_de_jogos
 
         private void lblLogin_Click(object sender, EventArgs e)
         {
-            bool isAdmin = rbIsAdmin.Checked;
-            LoginAdministrador loginAdministrador = new LoginAdministrador();
+            // verificar se o usuário marcou que vai logar como um administrador, caso seja o caso terá um IF
+            // logo abaixo que abre a tela de login de administrador ao invés da tela normal.
 
-            if (isAdmin)
+
+            bool loginAdmin = rbIsAdmin.Checked;
+            LoginAdministrador loginAdministrador = new LoginAdministrador();
+            LoginUsuario loginUsuario = new LoginUsuario();
+
+            if (loginAdmin)
             {
-                // ir para tela de login administrador
-                this.Hide();
+                // ir para tela de login administrador.
+                // login: Admin
+                // senha: 1234
                 loginAdministrador.ShowDialog();
-                this.Show();
-            } else
+            }
+            else
             {
                 // ir para tela de login usuário.
-                MessageBox.Show("Conectar como Usuário normal.");
+                loginUsuario.ShowDialog();
             }
 
 
 
 
+        }
+
+        private void lblLoginAdmin_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

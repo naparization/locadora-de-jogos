@@ -1,4 +1,5 @@
-﻿namespace locadora_de_jogos
+﻿
+namespace locadora_de_jogos
 {
     partial class LoginAdministrador
     {
@@ -28,81 +29,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtUsuario = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtSenha = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            lblLoginAdmin = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(22, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            txtUsuario.Location = new Point(32, 35);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(100, 23);
+            txtUsuario.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(48, 17);
+            label1.Location = new Point(57, 17);
             label1.Name = "label1";
             label1.Size = new Size(47, 15);
             label1.TabIndex = 1;
             label1.Text = "Usuário";
             // 
-            // textBox2
+            // txtSenha
             // 
-            textBox2.Location = new Point(22, 87);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 2;
+            txtSenha.Location = new Point(32, 87);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.Size = new Size(100, 23);
+            txtSenha.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(53, 69);
+            label2.Location = new Point(62, 69);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 3;
             label2.Text = "Senha";
             // 
-            // button1
+            // lblLoginAdmin
             // 
-            button1.Location = new Point(35, 125);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
+            lblLoginAdmin.Location = new Point(45, 122);
+            lblLoginAdmin.Name = "lblLoginAdmin";
+            lblLoginAdmin.Size = new Size(75, 23);
+            lblLoginAdmin.TabIndex = 4;
+            lblLoginAdmin.Text = "Login";
+            lblLoginAdmin.UseVisualStyleBackColor = true;
+            lblLoginAdmin.Click += button1_Click;
             // 
             // LoginAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(144, 172);
-            Controls.Add(button1);
+            ClientSize = new Size(164, 169);
+            Controls.Add(lblLoginAdmin);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtSenha);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsuario);
             Name = "LoginAdministrador";
-            Text = "Form1";
+            Text = "Login";
             ResumeLayout(false);
             PerformLayout();
         }
 
+
+
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtUsuario;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtSenha;
         private Label label2;
-        private Button button1;
+        private Button lblLoginAdmin;
     }
 }
