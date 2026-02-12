@@ -16,10 +16,14 @@ namespace locadora_de_jogos
         public byte option;
         public TelaInicial(bool isAdmin)
         {
-
+            
             this.isAdmin = isAdmin;
             this.option = 0;
                 InitializeComponent();
+            // botão multifuncional, caso seja Admin o layout é Novo/Editar/Excluir
+            // caso seja usuário padrão então Alugar/Editar/Devoler
+            // botão devolver muda de vermelho para uma cor lavanda, pois é menos ameaçador
+            // devolver o livro é algo bom, não queremos desencorajar o cliente :3
             if (isAdmin)
             {
                 btnNovoAlugar.Text = "Novo";
@@ -48,11 +52,39 @@ namespace locadora_de_jogos
 
         private void btnNovoAlugar_Click(object sender, EventArgs e)
         {
-
+            // código do administrador
+            if (isAdmin)
+            {
+                switch (option)
+                {
+                    // 0 = Jogos
+                    // 1 = Usuários
+                    // 2 = Registros
+                    case 0:
+                       
+                        var cadastroJogos = new CadastroJogo();
+                        this.Hide();
+                        cadastroJogos.ShowDialog();
+                        this.Show();
+                        break;
+                    case 1:
+                        MessageBox.Show("Usuários");
+                        break;
+                    case 2:
+                        MessageBox.Show("Registro.");
+                        break;
+                    default:
+                        // Esta função deveria ser impossível.
+                        break;
+                }
+                return;
+            }
+            // código do usuário padrão 
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
+            
             this.option = 2;
             if (!isAdmin)
             {

@@ -51,7 +51,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Super_Jogos;
-            pictureBox1.Location = new Point(133, -28);
+            pictureBox1.Location = new Point(133, -24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(399, 87);
             pictureBox1.TabIndex = 1;
@@ -135,7 +135,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Name = "TelaInicial";
-            Text = "TelaInicial";
+            Text = "Super Jogos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
