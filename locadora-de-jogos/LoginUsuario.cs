@@ -19,9 +19,9 @@ namespace locadora_de_jogos
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text.Length < 1)
+            if (txtUsuario.Text.Length != 11)
             {
-                txtErro.Text = "Usuário Inválido.";
+                txtErro.Text = "CPF informado inválido.";
                 return;
             }
             TelaInicial telaInicial = new TelaInicial(false);
@@ -30,6 +30,11 @@ namespace locadora_de_jogos
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginUsuario_Load(object sender, EventArgs e)
         {
 
         }

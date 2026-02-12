@@ -1,6 +1,6 @@
 ﻿using GerenciamentoDeFuncionarios.Modelo;
 
-namespace locadora_de_jogos.Modelo
+namespace GerenciamontoDeJogos.Modelo
 {
     public class Jogo
     {

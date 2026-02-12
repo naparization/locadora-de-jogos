@@ -2,7 +2,7 @@
 
 namespace GerenciamentoDeFuncionarios.Modelo
 {
-    public class Funcionario
+    public class Cliente
     {
         public int Id { get; set; }
 

@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace GerenciamentoDeFuncionarios.Banco.Configuracao
 {
-    public class ConexaoBanco
+    public class BancoDeDados
     {
         public IDbConnection CriarConexao()
         {

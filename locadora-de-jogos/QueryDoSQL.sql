@@ -7,10 +7,6 @@ CREATE TABLE Usuarios (
     DataCadastro DATE NOT NULL
 );
 
-CREATE TABLE Genero (
-	Id INT PRIMARY KEY IDENTITY(1,1),
-	Nome NVARCHAR(150) NOT NULL,
-);
 CREATE TABLE Jogos (
     Id INT PRIMARY KEY IDENTITY(1, 1),
     Titulo NVARCHAR(150) NOT NULL,
@@ -19,7 +15,6 @@ CREATE TABLE Jogos (
     DataLancamento DATE NOT NULL,
 	FOREIGN KEY (IdGenero) REFERENCES Genero(Id),
 );
-
 
 CREATE TABLE Registros (
     Id INT PRIMARY KEY IDENTITY(1, 1),
@@ -31,15 +26,6 @@ CREATE TABLE Registros (
     FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id),
     FOREIGN KEY (IdJogo) REFERENCES Jogos(Id)
 );
-
--- Insert Generos
-INSERT INTO Genero (Nome)
-VALUES
-('Ação'),
-('Esporte'),
-('RPG'),
-('Aventura'),
-('Sandbox');
 
 -- Insert Usuários
 INSERT INTO Usuarios (Nome, CPF, Email, Telefone, DataCadastro)
@@ -70,12 +56,11 @@ SELECT
     r.Id,
     u.Nome AS NomeUsuario,
     j.Titulo AS NomeJogo,
-    g.Nome AS Genero,
+    j.IdGenero AS Genero,
     r.DataAluguel,
     r.DataDevolucao
 FROM Registros r
 INNER JOIN Usuarios u ON r.IdUsuario = u.Id
-INNER JOIN Jogos j ON r.IdJogo = j.Id
-INNER JOIN Genero g ON j.IdGenero = g.Id;
+INNER JOIN Jogos j ON r.IdJogo = j.Id;
 
 
