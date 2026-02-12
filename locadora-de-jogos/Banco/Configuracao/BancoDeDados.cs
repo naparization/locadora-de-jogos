@@ -7,7 +7,7 @@ namespace GerenciamentoDeFuncionarios.Banco.Configuracao
     {
         public IDbConnection CriarConexao()
         {
-            return new SqlConnection("Server=(localdb)\\MSSQLLocalDB; Database=gerenciamento_funcionarios; Trusted_Connection=True;");
+            return new SqlConnection("Server=(localdb)\\MSSQLLocalDB; Database=locadora_super_jogos; Trusted_Connection=True;");
         }
     }
 }

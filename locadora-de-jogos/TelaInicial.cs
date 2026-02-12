@@ -32,8 +32,9 @@ namespace locadora_de_jogos
             } else
             {
                 btnNovoAlugar.Text = "Alugar";
-                btnExcluirDevolver.BackColor = Color.MediumPurple;
+                btnExcluirDevolver.BackColor = Color.Gray;
                 btnEditar.Enabled = false;
+                btnEditar.BackColor = Color.Gray;
                 btnExcluirDevolver.Enabled = false;
                 btnExcluirDevolver.Text = "Devolver";
             }
@@ -89,8 +90,11 @@ namespace locadora_de_jogos
             if (!isAdmin)
             {
                 btnNovoAlugar.Enabled = false;
+                btnNovoAlugar.BackColor = Color.Gray;
                 btnEditar.Enabled = false;
+                btnEditar.BackColor = Color.Gray;
                 btnExcluirDevolver.Enabled = true;
+                btnExcluirDevolver.BackColor = Color.FromArgb(225, 156 , 255);
             }
         }
 
@@ -100,8 +104,11 @@ namespace locadora_de_jogos
             if (!isAdmin)
             {
                 btnNovoAlugar.Enabled = false;
+                btnNovoAlugar.BackColor = Color.Gray;
                 btnEditar.Enabled= true;
+                btnEditar.BackColor = Color.FromArgb(255, 255, 192);
                 btnExcluirDevolver.Enabled= false;
+                btnExcluirDevolver.BackColor = Color.Gray;
             }
         }
 
@@ -111,8 +118,11 @@ namespace locadora_de_jogos
             if (!isAdmin)
             {
                 btnNovoAlugar.Enabled = true;
+                btnNovoAlugar.BackColor = Color.FromArgb(192, 255, 192);
                 btnEditar.Enabled = false;
+                btnEditar.BackColor = Color.Gray;
                 btnExcluirDevolver.Enabled = false;
+                btnExcluirDevolver.BackColor = Color.Gray;
             }
         }
     }

@@ -39,11 +39,11 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(25, 44);
+            label1.Location = new Point(35, 44);
             label1.Name = "label1";
-            label1.Size = new Size(117, 15);
+            label1.Size = new Size(93, 15);
             label1.TabIndex = 3;
-            label1.Text = "Digite o seu cadastro";
+            label1.Text = "Digite o seu CPF";
             label1.Click += label1_Click;
             // 
             // txtUsuario
