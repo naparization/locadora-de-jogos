@@ -55,7 +55,7 @@
             lblLogin.BackColor = Color.Black;
             lblLogin.Font = new Font("Segoe UI", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(255, 255, 128);
-            lblLogin.Location = new Point(247, 203);
+            lblLogin.Location = new Point(246, 203);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(184, 49);
             lblLogin.TabIndex = 1;
@@ -68,7 +68,7 @@
             lblLoginAdmin.BackColor = Color.Black;
             lblLoginAdmin.Font = new Font("Segoe UI", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lblLoginAdmin.ForeColor = Color.FromArgb(255, 255, 128);
-            lblLoginAdmin.Location = new Point(247, 257);
+            lblLoginAdmin.Location = new Point(246, 257);
             lblLoginAdmin.Name = "lblLoginAdmin";
             lblLoginAdmin.Size = new Size(184, 51);
             lblLoginAdmin.TabIndex = 2;
@@ -80,11 +80,11 @@
             // 
             rbIsAdmin.AutoSize = true;
             rbIsAdmin.ForeColor = Color.White;
-            rbIsAdmin.Location = new Point(297, 314);
+            rbIsAdmin.Location = new Point(270, 314);
             rbIsAdmin.Name = "rbIsAdmin";
-            rbIsAdmin.Size = new Size(85, 19);
+            rbIsAdmin.Size = new Size(137, 19);
             rbIsAdmin.TabIndex = 3;
-            rbIsAdmin.Text = "Sou Admin";
+            rbIsAdmin.Text = "Modo Administrador";
             rbIsAdmin.UseVisualStyleBackColor = true;
             rbIsAdmin.CheckedChanged += checkBox1_CheckedChanged;
             // 

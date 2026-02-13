@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GerenciamentoDeFuncionarios.Modelo;
-using GerenciamontoDeJogos.Modelo;
+using GerenciamentoDeJogos.Modelo;
+using GerenciamentoDeRegistros.Modelo;
 using locadora_de_jogos.Repositores;
 
 namespace locadora_de_jogos
@@ -54,14 +55,26 @@ namespace locadora_de_jogos
         private async Task AtualizarTabela()
         {
             
-
+            dgvDados.Rows.Clear();
             switch (option)
             {
                 case 0:
                     var jogos = await JogoRepository.ObterJogos();
                     dgvDados.DataSource = new BindingList<Jogo>(jogos.ToList());
                     break;
+                case 1:
+                    var clientes = await ClienteRepository.ObterClientes();
+                    dgvDados.DataSource = new BindingList<Cliente>(clientes.ToList());
+                    break;
+                case 2:
+                    // tabela registros
+                    var registros = await RegistroRepository.ObterRegistros();
+                    dgvDados.DataSource = new BindingList<Registro>(registros.ToList());
+                    break;
                 default:
+                    // deu merda
+                    var padrao = await JogoRepository.ObterJogos();
+                    dgvDados.DataSource = new BindingList<Jogo>(padrao.ToList());
                     break;
             }
                 
@@ -111,10 +124,11 @@ namespace locadora_de_jogos
             // código do usuário padrão 
         }
 
-        private void btnRegistro_Click(object sender, EventArgs e)
+        private async void btnRegistro_Click(object sender, EventArgs e)
         {
             
             this.option = 2;
+            await AtualizarTabela();
             if (!isAdmin)
             {
                 btnNovoAlugar.Enabled = false;
@@ -126,9 +140,10 @@ namespace locadora_de_jogos
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
             this.option = 1;
+            await AtualizarTabela();
             if (!isAdmin)
             {
                 btnNovoAlugar.Enabled = false;
@@ -140,9 +155,10 @@ namespace locadora_de_jogos
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             this.option = 0;
+            await AtualizarTabela();
             if (!isAdmin)
             {
                 btnNovoAlugar.Enabled = true;

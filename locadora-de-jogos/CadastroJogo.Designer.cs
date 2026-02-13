@@ -191,7 +191,7 @@
             Controls.Add(txtNomeJogo);
             Controls.Add(label1);
             Name = "CadastroJogo";
-            Text = "CadastroJogo";
+            Text = "Cadastro Jogo";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

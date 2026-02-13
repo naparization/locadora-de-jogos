@@ -23,5 +23,7 @@ namespace GerenciamentoDeFuncionarios.Modelo
         public string Telefone { get; set; }
 
         public DateTime DataCadastro { get; set; }
+
+        public string IdentificadorUnico { get; set; }
     }
 }

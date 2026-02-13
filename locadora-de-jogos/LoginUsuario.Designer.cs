@@ -83,7 +83,7 @@
             Controls.Add(label1);
             Controls.Add(txtUsuario);
             Name = "LoginUsuario";
-            Text = "LoginUsuario";
+            Text = "Login Usuario";
             Load += LoginUsuario_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -1,7 +1,7 @@
 ﻿using GerenciamentoDeFuncionarios.Modelo;
 using GerenciamentoDeGenero.Modelo;
 
-namespace GerenciamontoDeJogos.Modelo
+namespace GerenciamentoDeJogos.Modelo
 {
     public class Jogo
     {

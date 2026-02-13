@@ -50,7 +50,7 @@
             // 
             txtNomeUsuario.Location = new Point(12, 33);
             txtNomeUsuario.Name = "txtNomeUsuario";
-            txtNomeUsuario.PlaceholderText = "Guilherme Hernandez";
+            txtNomeUsuario.PlaceholderText = "Fulano De Tal";
             txtNomeUsuario.Size = new Size(245, 23);
             txtNomeUsuario.TabIndex = 2;
             txtNomeUsuario.TextChanged += txtNomeJogo_TextChanged;
@@ -141,7 +141,7 @@
             // 
             txtEmail.Location = new Point(12, 163);
             txtEmail.Name = "txtEmail";
-            txtEmail.PlaceholderText = "guilhermehernandez@gmail.com";
+            txtEmail.PlaceholderText = "nome@dominio.com";
             txtEmail.Size = new Size(245, 23);
             txtEmail.TabIndex = 8;
             // 
@@ -221,7 +221,7 @@
             Controls.Add(label1);
             Controls.Add(txtNomeUsuario);
             Name = "CadastroUsuarios";
-            Text = "CadastroUsuarios";
+            Text = "Cadastro Usuarios";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

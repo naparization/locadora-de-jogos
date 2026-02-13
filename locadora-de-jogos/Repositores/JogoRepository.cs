@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using GerenciamentoDeFuncionarios.Banco.Configuracao;
 using GerenciamentoDeFuncionarios.Modelo;
-using GerenciamontoDeJogos.Modelo;
+using GerenciamentoDeJogos.Modelo;
 
 namespace locadora_de_jogos.Repositores
 {

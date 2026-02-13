@@ -43,7 +43,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 94);
+            label1.Location = new Point(12, 129);
             label1.Name = "label1";
             label1.Size = new Size(82, 21);
             label1.TabIndex = 4;
@@ -66,20 +66,20 @@
             txtIdUsuario.Location = new Point(12, 55);
             txtIdUsuario.Name = "txtIdUsuario";
             txtIdUsuario.PlaceholderText = "ex: 1";
-            txtIdUsuario.Size = new Size(40, 23);
+            txtIdUsuario.Size = new Size(246, 23);
             txtIdUsuario.TabIndex = 6;
             // 
             // txtIdJogo
             // 
-            txtIdJogo.Location = new Point(12, 118);
+            txtIdJogo.Location = new Point(12, 153);
             txtIdJogo.Name = "txtIdJogo";
             txtIdJogo.PlaceholderText = "ex: 1";
-            txtIdJogo.Size = new Size(40, 23);
+            txtIdJogo.Size = new Size(246, 23);
             txtIdJogo.TabIndex = 7;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(12, 208);
+            btnSalvar.Location = new Point(12, 211);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 14;
@@ -88,7 +88,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(138, 208);
+            btnCancelar.Location = new Point(138, 211);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 15;
@@ -100,7 +100,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(55, 58);
+            label3.Location = new Point(77, 82);
             label3.Name = "label3";
             label3.Size = new Size(113, 17);
             label3.TabIndex = 16;
@@ -111,7 +111,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(54, 121);
+            label4.Location = new Point(84, 180);
             label4.Name = "label4";
             label4.Size = new Size(97, 17);
             label4.TabIndex = 17;
@@ -132,7 +132,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "CadastroRegistros";
-            Text = "CadastroRegistros";
+            Text = "Cadastro Registros";
             ResumeLayout(false);
             PerformLayout();
         }

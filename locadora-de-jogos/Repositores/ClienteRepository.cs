@@ -20,7 +20,8 @@ namespace locadora_de_jogos.Repositores
                     CPF,
                     Email,
                     Telefone,
-                    DataCadastro
+                    DataCadastro,
+                    IdentificadorUnico
                   FROM
                    Usuarios
                 ");
