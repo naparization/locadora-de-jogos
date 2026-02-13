@@ -17,7 +17,7 @@ namespace locadora_de_jogos.Repositores
                   SELECT
                     Id,
                     Titulo,
-                    IdGenero,
+                    IdGenero AS Genero,
                     Preco,
                     DataLancamento
                   FROM
