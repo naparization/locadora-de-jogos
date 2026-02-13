@@ -4,6 +4,12 @@
     <Compile Update="CadastroJogo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CadastroRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CadastroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoginAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
