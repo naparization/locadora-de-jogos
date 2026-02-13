@@ -15,6 +15,7 @@ x86/
 
 # Visual Studio cache/options
 .vs/
+.vs\
 *.user
 *.userosscache
 *.suo
