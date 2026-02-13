@@ -2,7 +2,7 @@
 
 namespace GerenciamentoDeGenero.Modelo
 {
-    public enum Genero
+    public enum GeneroJogo
     {
         Acao = 1,
         RPG = 2,

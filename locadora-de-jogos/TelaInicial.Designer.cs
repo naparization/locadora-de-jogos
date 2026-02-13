@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvDados = new DataGridView();
             pictureBox1 = new PictureBox();
             btnJogos = new Button();
             btnUsuarios = new Button();
@@ -36,17 +36,19 @@
             btnEditar = new Button();
             btnExcluirDevolver = new Button();
             btnRegistros = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDados
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 65);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(494, 373);
-            dataGridView1.TabIndex = 0;
+            dgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDados.Location = new Point(12, 65);
+            dgvDados.Name = "dgvDados";
+            dgvDados.ReadOnly = true;
+            dgvDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDados.Size = new Size(494, 373);
+            dgvDados.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -133,17 +135,17 @@
             Controls.Add(btnUsuarios);
             Controls.Add(btnJogos);
             Controls.Add(pictureBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvDados);
             Name = "TelaInicial";
             Text = "Super Jogos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvDados;
         private PictureBox pictureBox1;
         private Button btnJogos;
         private Button btnUsuarios;

@@ -1,4 +1,5 @@
 ﻿using GerenciamentoDeFuncionarios.Modelo;
+using GerenciamentoDeGenero.Modelo;
 
 namespace GerenciamontoDeJogos.Modelo
 {
@@ -8,7 +9,7 @@ namespace GerenciamontoDeJogos.Modelo
 
         public string Titulo { get; set; } = string.Empty;
 
-        public Genero Genero { get; set; }
+        public GeneroJogo Genero { get; set; }
 
         public decimal Preco { get; set; }
 

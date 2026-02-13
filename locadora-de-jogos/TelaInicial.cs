@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GerenciamentoDeFuncionarios.Modelo;
+using GerenciamontoDeJogos.Modelo;
+using locadora_de_jogos.Repositores;
 
 namespace locadora_de_jogos
 {
@@ -38,6 +41,31 @@ namespace locadora_de_jogos
                 btnExcluirDevolver.Enabled = false;
                 btnExcluirDevolver.Text = "Devolver";
             }
+
+            Load += TelaInicial_Load;
+
+        }
+
+        private async void TelaInicial_Load(object? sender, EventArgs e)
+        {
+            await AtualizarTabela();
+        }
+
+        private async Task AtualizarTabela()
+        {
+            
+
+            switch (option)
+            {
+                case 0:
+                    var jogos = await JogoRepository.ObterJogos();
+                    dgvDados.DataSource = new BindingList<Jogo>(jogos.ToList());
+                    break;
+                default:
+                    break;
+            }
+                
+            
 
         }
 

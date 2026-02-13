@@ -4,7 +4,8 @@ CREATE TABLE Usuarios (
 	CPF NVARCHAR (11) NOT NULL,
     Email NVARCHAR(150) NOT NULL UNIQUE,
     Telefone NVARCHAR(20),
-    DataCadastro DATE NOT NULL
+    DataCadastro DATE NOT NULL,
+    IdentificadorUnico NVARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Jogos (
