@@ -34,6 +34,8 @@
             txtIdJogo = new TextBox();
             btnSalvar = new Button();
             btnCancelar = new Button();
+            label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -64,7 +66,7 @@
             txtIdUsuario.Location = new Point(12, 55);
             txtIdUsuario.Name = "txtIdUsuario";
             txtIdUsuario.PlaceholderText = "ex: 1";
-            txtIdUsuario.Size = new Size(245, 23);
+            txtIdUsuario.Size = new Size(40, 23);
             txtIdUsuario.TabIndex = 6;
             // 
             // txtIdJogo
@@ -72,7 +74,7 @@
             txtIdJogo.Location = new Point(12, 118);
             txtIdJogo.Name = "txtIdJogo";
             txtIdJogo.PlaceholderText = "ex: 1";
-            txtIdJogo.Size = new Size(245, 23);
+            txtIdJogo.Size = new Size(40, 23);
             txtIdJogo.TabIndex = 7;
             // 
             // btnSalvar
@@ -93,12 +95,36 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(55, 58);
+            label3.Name = "label3";
+            label3.Size = new Size(113, 17);
+            label3.TabIndex = 16;
+            label3.Text = "Nome do Usuário";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(54, 121);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 17);
+            label4.TabIndex = 17;
+            label4.Text = "Nome do Jogo";
+            // 
             // CadastroRegistros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 392);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(txtIdJogo);
@@ -119,5 +145,7 @@
         private TextBox txtIdJogo;
         private Button btnSalvar;
         private Button btnCancelar;
+        private Label label3;
+        private Label label4;
     }
 }
