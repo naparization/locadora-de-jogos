@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GerenciamentoDeFuncionarios.Modelo;
+using GerenciamentoDeGenero.Modelo;
+using GerenciamentoDeJogos.Modelo;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using Timer = System.Windows.Forms.Timer;
@@ -33,30 +36,13 @@ namespace locadora_de_jogos
 
         private void RodarTodoFrame_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                decimal valorMonetario = decimal.Parse(txtPreco.Text);
-                if (txtNomeJogo.Text.Length > 0 && valorMonetario > 0)
-                {
-                    btnSalvar.Enabled = true;
-                }
-                else
-                {
-                    btnSalvar.Enabled = false;
-                }
+            var jogo = new Jogo();
+            jogo.Titulo = txtNomeJogo.Text;
+            jogo.Genero = rbAcao.Checked ? GeneroJogo.Acao : rbRPG.Checked ? GeneroJogo.RPG : GeneroJogo.Shooter;
+            jogo.DataLancamento = dtLancamento.Value;
 
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                btnSalvar.Enabled = false;
-
-            }
-
-
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

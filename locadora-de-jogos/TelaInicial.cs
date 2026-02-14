@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -110,13 +111,21 @@ namespace locadora_de_jogos
                         this.Show();
                         break;
                     case 1:
-                        MessageBox.Show("Usuários");
+                        var cadastroCliente = new CadastroUsuarios();
+                        this.Hide();
+                        cadastroCliente.ShowDialog();
+                        this.Show();
                         break;
                     case 2:
-                        MessageBox.Show("Registro.");
+                        var cadastroRegistros = new CadastroRegistros();
+                        this.Hide();
+                        cadastroRegistros.ShowDialog();
+                        this.Show();
                         break;
                     default:
-                        // Esta função deveria ser impossível.
+                        // Esta função deveria ser impossível, se este código rodar: Fudeu.
+                        MessageBox.Show("Algo deu errado, tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        option = 0;
                         break;
                 }
                 return;

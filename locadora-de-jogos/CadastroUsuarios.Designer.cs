@@ -207,7 +207,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(269, 392);
+            ClientSize = new Size(269, 465);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(txtTelefone);

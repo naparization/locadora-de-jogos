@@ -36,6 +36,7 @@
             btnCancelar = new Button();
             label3 = new Label();
             label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -43,7 +44,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 129);
+            label1.Location = new Point(12, 168);
             label1.Name = "label1";
             label1.Size = new Size(82, 21);
             label1.TabIndex = 4;
@@ -55,7 +56,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 31);
+            label2.Location = new Point(12, 98);
             label2.Name = "label2";
             label2.Size = new Size(103, 21);
             label2.TabIndex = 5;
@@ -63,7 +64,7 @@
             // 
             // txtIdUsuario
             // 
-            txtIdUsuario.Location = new Point(12, 55);
+            txtIdUsuario.Location = new Point(12, 122);
             txtIdUsuario.Name = "txtIdUsuario";
             txtIdUsuario.PlaceholderText = "ex: 1";
             txtIdUsuario.Size = new Size(246, 23);
@@ -71,7 +72,7 @@
             // 
             // txtIdJogo
             // 
-            txtIdJogo.Location = new Point(12, 153);
+            txtIdJogo.Location = new Point(12, 192);
             txtIdJogo.Name = "txtIdJogo";
             txtIdJogo.PlaceholderText = "ex: 1";
             txtIdJogo.Size = new Size(246, 23);
@@ -79,7 +80,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(12, 211);
+            btnSalvar.Location = new Point(12, 250);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 14;
@@ -88,7 +89,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(138, 211);
+            btnCancelar.Location = new Point(138, 250);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 15;
@@ -100,7 +101,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(77, 82);
+            label3.Location = new Point(77, 149);
             label3.Name = "label3";
             label3.Size = new Size(113, 17);
             label3.TabIndex = 16;
@@ -111,11 +112,23 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(84, 180);
+            label4.Location = new Point(84, 219);
             label4.Name = "label4";
             label4.Size = new Size(97, 17);
             label4.TabIndex = 17;
             label4.Text = "Nome do Jogo";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Black;
+            label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Yellow;
+            label5.Location = new Point(16, 24);
+            label5.Name = "label5";
+            label5.Size = new Size(236, 32);
+            label5.TabIndex = 18;
+            label5.Text = "Criador de Registro";
             // 
             // CadastroRegistros
             // 
@@ -123,6 +136,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 392);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(btnCancelar);
@@ -147,5 +161,6 @@
         private Button btnCancelar;
         private Label label3;
         private Label label4;
+        private Label label5;
     }
 }
