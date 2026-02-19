@@ -53,7 +53,7 @@ namespace locadora_de_jogos
             await AtualizarTabela();
         }
 
-        private async Task AtualizarTabela()
+        public async Task AtualizarTabela()
         {
             
             dgvDados.Rows.Clear();
@@ -83,14 +83,47 @@ namespace locadora_de_jogos
 
         }
 
-        private void btnExcluirDevolver_Click(object sender, EventArgs e)
+        private async void btnExcluirDevolver_Click(object sender, EventArgs e)
         {
+            if (isAdmin)
+            {
+                switch (option)
+                {
+                    case 0:
+                        string nomeJogo = dgvDados.SelectedRows[0].Cells[1].Value.ToString();
+                        var retorno = MessageBox.Show($"Tem certeza que deseja excluir jogo {nomeJogo}?", "Excluir jogo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                        if (retorno == DialogResult.Yes)
+                        {
+                            int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                            await JogoRepository.DeletarJogo(idJogo);
+                            await AtualizarTabela();
+                            
+                        }
+                        break;
+                    default:
+                        MessageBox.Show("Não definido.");
+                        break;
+                }
+            } else
+            {
+
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            switch (option) {
+                case 0:
+                    int IdJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                    var atualizarJogo = new AtualizarJogo(IdJogo, this);
+                    atualizarJogo.ShowDialog();
 
+                    break;                   
+                default:
+                    break;
+
+            } 
         }
 
         private void btnNovoAlugar_Click(object sender, EventArgs e)
@@ -105,7 +138,7 @@ namespace locadora_de_jogos
                     // 2 = Registros
                     case 0:
                        
-                        var cadastroJogos = new CadastroJogo();
+                        var cadastroJogos = new CadastroJogo(this);
                         this.Hide();
                         cadastroJogos.ShowDialog();
                         this.Show();

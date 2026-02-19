@@ -86,6 +86,7 @@
             btnSalvar.TabIndex = 14;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnCancelar
             // 
@@ -124,11 +125,11 @@
             label5.BackColor = Color.Black;
             label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Yellow;
-            label5.Location = new Point(16, 24);
+            label5.Location = new Point(9, 24);
             label5.Name = "label5";
-            label5.Size = new Size(236, 32);
+            label5.Size = new Size(250, 32);
             label5.TabIndex = 18;
-            label5.Text = "Criador de Registro";
+            label5.Text = "Gerador de registros";
             // 
             // CadastroRegistros
             // 

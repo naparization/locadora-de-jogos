@@ -19,11 +19,6 @@ namespace locadora_de_jogos
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text.Length != 11)
-            {
-                txtErro.Text = "CPF informado inválido.";
-                return;
-            }
             TelaInicial telaInicial = new TelaInicial(false);
             this.Hide();
             telaInicial.ShowDialog();

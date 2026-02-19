@@ -53,7 +53,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Super_Jogos;
-            pictureBox1.Location = new Point(133, -24);
+            pictureBox1.Location = new Point(121, -24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(399, 87);
             pictureBox1.TabIndex = 1;

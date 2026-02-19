@@ -1,6 +1,6 @@
 ﻿namespace locadora_de_jogos
 {
-    partial class CadastroJogo
+    partial class AtualizarJogo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,40 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            txtNomeJogo = new TextBox();
             groupBox1 = new GroupBox();
             rbShooter = new RadioButton();
             rbRPG = new RadioButton();
             rbAcao = new RadioButton();
-            label3 = new Label();
-            txtPreco = new TextBox();
-            label4 = new Label();
-            dtLancamento = new DateTimePicker();
-            btnSalvar = new Button();
+            txtNomeJogo = new TextBox();
+            label1 = new Label();
             btnCancelar = new Button();
-            txtErro = new Label();
+            btnSalvar = new Button();
+            dtLancamento = new DateTimePicker();
+            label4 = new Label();
+            txtPreco = new TextBox();
+            label3 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Título";
-            // 
-            // txtNomeJogo
-            // 
-            txtNomeJogo.Location = new Point(12, 32);
-            txtNomeJogo.Name = "txtNomeJogo";
-            txtNomeJogo.PlaceholderText = "Nome Do Jogo";
-            txtNomeJogo.Size = new Size(245, 23);
-            txtNomeJogo.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -72,7 +52,7 @@
             groupBox1.Location = new Point(12, 67);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(245, 51);
-            groupBox1.TabIndex = 3;
+            groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Gênero";
             // 
@@ -99,33 +79,57 @@
             // rbAcao
             // 
             rbAcao.AutoSize = true;
-            rbAcao.Checked = true;
             rbAcao.Location = new Point(26, 21);
             rbAcao.Name = "rbAcao";
             rbAcao.Size = new Size(52, 19);
             rbAcao.TabIndex = 0;
-            rbAcao.TabStop = true;
             rbAcao.Text = "Ação";
             rbAcao.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // txtNomeJogo
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(12, 121);
-            label3.Name = "label3";
-            label3.Size = new Size(49, 21);
-            label3.TabIndex = 4;
-            label3.Text = "Preço";
+            txtNomeJogo.Location = new Point(12, 32);
+            txtNomeJogo.Name = "txtNomeJogo";
+            txtNomeJogo.PlaceholderText = "Nome Do Jogo";
+            txtNomeJogo.Size = new Size(245, 23);
+            txtNomeJogo.TabIndex = 5;
             // 
-            // txtPreco
+            // label1
             // 
-            txtPreco.Location = new Point(12, 147);
-            txtPreco.Name = "txtPreco";
-            txtPreco.PlaceholderText = "100,00";
-            txtPreco.Size = new Size(245, 23);
-            txtPreco.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(12, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 21);
+            label1.TabIndex = 4;
+            label1.Text = "Título";
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(137, 246);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(120, 58);
+            btnCancelar.TabIndex = 15;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.Location = new Point(11, 246);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(120, 58);
+            btnSalvar.TabIndex = 14;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
+            // 
+            // dtLancamento
+            // 
+            dtLancamento.Location = new Point(11, 201);
+            dtLancamento.Name = "dtLancamento";
+            dtLancamento.Size = new Size(246, 23);
+            dtLancamento.TabIndex = 13;
             // 
             // label4
             // 
@@ -135,63 +139,45 @@
             label4.Location = new Point(12, 173);
             label4.Name = "label4";
             label4.Size = new Size(131, 21);
-            label4.TabIndex = 6;
+            label4.TabIndex = 12;
             label4.Text = "Data Lançamento";
             // 
-            // dtLancamento
+            // txtPreco
             // 
-            dtLancamento.Location = new Point(11, 201);
-            dtLancamento.Name = "dtLancamento";
-            dtLancamento.Size = new Size(246, 23);
-            dtLancamento.TabIndex = 7;
+            txtPreco.Location = new Point(12, 147);
+            txtPreco.Name = "txtPreco";
+            txtPreco.PlaceholderText = "100,00";
+            txtPreco.Size = new Size(245, 23);
+            txtPreco.TabIndex = 11;
             // 
-            // btnSalvar
+            // label3
             // 
-            btnSalvar.Location = new Point(11, 246);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(120, 58);
-            btnSalvar.TabIndex = 8;
-            btnSalvar.Text = "Salvar";
-            btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += btnSalvar_Click;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(12, 121);
+            label3.Name = "label3";
+            label3.Size = new Size(49, 21);
+            label3.TabIndex = 10;
+            label3.Text = "Preço";
             // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(137, 246);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(120, 58);
-            btnCancelar.TabIndex = 9;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
-            // 
-            // txtErro
-            // 
-            txtErro.AutoSize = true;
-            txtErro.ForeColor = Color.Red;
-            txtErro.Location = new Point(12, 307);
-            txtErro.Name = "txtErro";
-            txtErro.Size = new Size(0, 15);
-            txtErro.TabIndex = 10;
-            // 
-            // CadastroJogo
+            // AtualizarJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 392);
-            Controls.Add(txtErro);
             Controls.Add(btnCancelar);
+            Controls.Add(groupBox1);
             Controls.Add(btnSalvar);
             Controls.Add(dtLancamento);
+            Controls.Add(txtNomeJogo);
             Controls.Add(label4);
+            Controls.Add(label1);
             Controls.Add(txtPreco);
             Controls.Add(label3);
-            Controls.Add(groupBox1);
-            Controls.Add(txtNomeJogo);
-            Controls.Add(label1);
-            Name = "CadastroJogo";
-            Text = "Cadastro Jogo";
+            Name = "AtualizarJogo";
+            Text = "Atualizar Jogo";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -200,18 +186,17 @@
 
         #endregion
 
-        private Label label1;
-        private TextBox txtNomeJogo;
         private GroupBox groupBox1;
-        private Label label3;
-        private TextBox txtPreco;
-        private Label label4;
-        private DateTimePicker dtLancamento;
         private RadioButton rbShooter;
         private RadioButton rbRPG;
         private RadioButton rbAcao;
-        private Button btnSalvar;
+        private TextBox txtNomeJogo;
+        private Label label1;
         private Button btnCancelar;
-        private Label txtErro;
+        private Button btnSalvar;
+        private DateTimePicker dtLancamento;
+        private Label label4;
+        private TextBox txtPreco;
+        private Label label3;
     }
 }

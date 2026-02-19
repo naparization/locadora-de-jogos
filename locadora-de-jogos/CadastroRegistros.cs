@@ -21,5 +21,10 @@ namespace locadora_de_jogos
         {
 
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
