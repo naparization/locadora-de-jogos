@@ -169,7 +169,7 @@
             // 
             txtErro.AutoSize = true;
             txtErro.ForeColor = Color.Red;
-            txtErro.Location = new Point(12, 307);
+            txtErro.Location = new Point(5, 309);
             txtErro.Name = "txtErro";
             txtErro.Size = new Size(0, 15);
             txtErro.TabIndex = 10;

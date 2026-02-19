@@ -40,6 +40,7 @@
             label4 = new Label();
             txtPreco = new TextBox();
             label3 = new Label();
+            txtErro = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -113,6 +114,7 @@
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvar
             // 
@@ -161,12 +163,22 @@
             label3.TabIndex = 10;
             label3.Text = "Preço";
             // 
+            // txtErro
+            // 
+            txtErro.AutoSize = true;
+            txtErro.ForeColor = Color.Red;
+            txtErro.Location = new Point(5, 309);
+            txtErro.Name = "txtErro";
+            txtErro.Size = new Size(0, 15);
+            txtErro.TabIndex = 16;
+            // 
             // AtualizarJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 392);
+            Controls.Add(txtErro);
             Controls.Add(btnCancelar);
             Controls.Add(groupBox1);
             Controls.Add(btnSalvar);
@@ -198,5 +210,6 @@
         private Label label4;
         private TextBox txtPreco;
         private Label label3;
+        private Label txtErro;
     }
 }

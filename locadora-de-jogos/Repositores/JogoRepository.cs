@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using System.Threading.Tasks;
+using Dapper;
 using GerenciamentoDeFuncionarios.Banco.Configuracao;
 using GerenciamentoDeFuncionarios.Modelo;
 using GerenciamentoDeJogos.Modelo;
@@ -61,20 +62,33 @@ namespace locadora_de_jogos.Repositores
                 @"
                     SELECT
                         Id,
-                        Nome,
-                        Email,
-                        Salario,
-                        Sexo,
-                        TipoContrato,
-                        DataCadastro,
-                        DataAtualizacao
+                        Titulo,
+                        IdGenero AS Genero,
+                        Preco,
+                        DataLancamento
                 FROM
-                    Funcionario
+                    Jogos
                 WHERE
                     Id = @Id
                 ", new { Id = idJogo });
 
             return funcionario;
+        }
+
+        internal static async Task AtualizarPorId(Jogo jogoUniversal)
+        {
+            await bancoDeDados.CriarConexao().QueryAsync(
+                @"
+                    UPDATE Jogos
+                    SET
+                    Titulo = @Titulo,
+                    IdGenero = @Genero,
+                    Preco = @Preco,
+                    DataLancamento = @DataLancamento
+                    WHERE Id = @Id
+                ", jogoUniversal
+
+                );
         }
     }
 }

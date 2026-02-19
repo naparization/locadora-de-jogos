@@ -96,17 +96,7 @@ namespace locadora_de_jogos
 
         }
 
-        private void btnSalvar_MouseHover(object sender, EventArgs e)
-        {
-            string Erro = " ";
-            txtErro.Text = Erro;
-
-            if (txtNomeJogo.Text.Length < 1)
-            {
-                Erro = Erro + "Campo \"Nome\" é obrigatório. \n";
-                txtErro.Text = Erro;
-            }
-        }
+        
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {

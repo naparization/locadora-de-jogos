@@ -90,8 +90,16 @@ namespace locadora_de_jogos
                 switch (option)
                 {
                     case 0:
-                        string nomeJogo = dgvDados.SelectedRows[0].Cells[1].Value.ToString();
-                        var retorno = MessageBox.Show($"Tem certeza que deseja excluir jogo {nomeJogo}?", "Excluir jogo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        var tabela = dgvDados.SelectedRows[0].Cells[1].Value;
+
+                        if (tabela == null)
+                        {
+                            return;
+                        }
+
+                        string nomeJogo = tabela.ToString();
+
+                            var retorno = MessageBox.Show($"Tem certeza que deseja excluir jogo {nomeJogo}?", "Excluir jogo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (retorno == DialogResult.Yes)
                         {
