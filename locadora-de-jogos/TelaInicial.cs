@@ -152,7 +152,7 @@ namespace locadora_de_jogos
                         this.Show();
                         break;
                     case 1:
-                        var cadastroCliente = new CadastroUsuarios();
+                        var cadastroCliente = new CadastroUsuarios(this);
                         this.Hide();
                         cadastroCliente.ShowDialog();
                         this.Show();

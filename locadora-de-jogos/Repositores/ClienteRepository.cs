@@ -28,5 +28,14 @@ namespace locadora_de_jogos.Repositores
 
             return clientes;
         }
+
+        internal static void Adicionar(Cliente clienteGlobal)
+        {
+            bancoDeDados.CriarConexao().QueryAsync<Cliente>(
+                @"
+                    INSERT INTO Usuarios (Nome, CPF, Email, Telefone, DataCadastro, IdentificadorUnico)
+                    VALUES (@Nome, @CPF, @Email, @Telefone, @DataCadastro, @IdentificadorUnico);
+                ");
+        }
     }
 }

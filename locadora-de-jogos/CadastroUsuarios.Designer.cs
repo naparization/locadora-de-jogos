@@ -43,6 +43,7 @@
             txtTelefone = new TextBox();
             btnSalvar = new Button();
             btnCancelar = new Button();
+            txtErro = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -130,7 +131,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 139);
+            label2.Location = new Point(12, 126);
             label2.Name = "label2";
             label2.Size = new Size(48, 21);
             label2.TabIndex = 7;
@@ -139,7 +140,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(12, 163);
+            txtEmail.Location = new Point(12, 150);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "nome@dominio.com";
             txtEmail.Size = new Size(245, 23);
@@ -150,7 +151,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(12, 197);
+            label4.Location = new Point(12, 184);
             label4.Name = "label4";
             label4.Size = new Size(37, 21);
             label4.TabIndex = 9;
@@ -158,7 +159,7 @@
             // 
             // txtCpf
             // 
-            txtCpf.Location = new Point(12, 221);
+            txtCpf.Location = new Point(12, 208);
             txtCpf.Name = "txtCpf";
             txtCpf.PlaceholderText = "000.000.000-00";
             txtCpf.Size = new Size(245, 23);
@@ -170,7 +171,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(12, 258);
+            label5.Location = new Point(12, 245);
             label5.Name = "label5";
             label5.Size = new Size(67, 21);
             label5.TabIndex = 11;
@@ -178,7 +179,7 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(12, 282);
+            txtTelefone.Location = new Point(12, 269);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.PlaceholderText = " 51 9999-9999";
             txtTelefone.Size = new Size(245, 23);
@@ -186,21 +187,31 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(12, 322);
+            btnSalvar.Location = new Point(11, 307);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 13;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(138, 322);
+            btnCancelar.Location = new Point(137, 307);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // txtErro
+            // 
+            txtErro.AutoSize = true;
+            txtErro.ForeColor = Color.Red;
+            txtErro.Location = new Point(5, 366);
+            txtErro.Name = "txtErro";
+            txtErro.Size = new Size(0, 15);
+            txtErro.TabIndex = 15;
             // 
             // CadastroUsuarios
             // 
@@ -208,6 +219,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 465);
+            Controls.Add(txtErro);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(txtTelefone);
@@ -244,5 +256,6 @@
         private TextBox txtTelefone;
         private Button btnSalvar;
         private Button btnCancelar;
+        private Label txtErro;
     }
 }
