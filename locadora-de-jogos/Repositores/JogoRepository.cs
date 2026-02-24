@@ -49,7 +49,7 @@ namespace locadora_de_jogos.Repositores
                 MessageBox.Show($"Jogo {idJogo} foi deletado com sucesso.", "Excluir funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             } catch (Exception)
             {
-                MessageBox.Show($"O jogo de ID {idJogo} não pode ser deletado, pois está sendo referenciado em um dos registros.", "Erro ao deletae", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"O jogo de ID {idJogo} não pode ser deletado, pois está sendo referenciado em um dos registros.", "Erro ao deletar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             

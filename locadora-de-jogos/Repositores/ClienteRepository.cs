@@ -2,6 +2,7 @@
 using Dapper;
 using GerenciamentoDeFuncionarios.Banco.Configuracao;
 using GerenciamentoDeFuncionarios.Modelo;
+using GerenciamentoDeJogos.Modelo;
 
 namespace locadora_de_jogos.Repositores
 {
@@ -18,6 +19,7 @@ namespace locadora_de_jogos.Repositores
                     Id,
                     Nome,
                     CPF,
+                    Genero,
                     Email,
                     Telefone,
                     DataCadastro,
@@ -29,13 +31,68 @@ namespace locadora_de_jogos.Repositores
             return clientes;
         }
 
-        internal static void Adicionar(Cliente clienteGlobal)
+        internal static void Adicionar(Cliente cliente)
         {
             bancoDeDados.CriarConexao().QueryAsync<Cliente>(
                 @"
-                    INSERT INTO Usuarios (Nome, CPF, Email, Telefone, DataCadastro, IdentificadorUnico)
-                    VALUES (@Nome, @CPF, @Email, @Telefone, @DataCadastro, @IdentificadorUnico);
-                ");
+                    INSERT INTO Usuarios (Nome, CPF, Genero, Email, Telefone, DataCadastro, IdentificadorUnico)
+                    VALUES (@Nome, @CPF, @Genero, @Email, @Telefone, @DataCadastro, @IdentificadorUnico);
+                ", cliente);
+        }
+
+        public static async Task<Cliente> BuscarPorId(int idUsuario)
+        {
+            var cliente = await bancoDeDados.CriarConexao()
+                .QueryFirstOrDefaultAsync<Cliente>(
+                @"
+                    SELECT
+                        Nome,
+                        CPF,
+                        Genero,
+                        Email,
+                        Telefone,
+                        DataCadastro,
+                        IdentificadorUnico
+                FROM
+                    Usuarios
+                WHERE
+                    Id = @Id
+                ", new { Id = idUsuario });
+
+            return cliente;
+        }
+
+        internal static async Task AtualizarPorId(Cliente clienteGlobal)
+        {
+            await bancoDeDados.CriarConexao().QueryAsync(
+                @"
+                    UPDATE Usuarios
+                    SET
+                    Nome = @Nome,
+                    CPF = @CPF,
+                    Genero = @Genero,
+                    Email = @Email,
+                    Telefone = @Telefone
+                    WHERE Id = @Id
+                ", clienteGlobal);
+        }
+
+        internal static async Task DeletarCliente(int idCliente)
+        {
+            try
+            {
+                await bancoDeDados.CriarConexao().QueryAsync(
+                @"
+                    DELETE FROM Usuarios
+                    WHERE id = @Id
+                ", new { Id = idCliente });
+                MessageBox.Show($"Cliente {idCliente} foi deletado com sucesso.", "Excluir cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"O Cliente de ID {idCliente} não pode ser deletado, pois está sendo referenciado em um dos registros.", "Erro ao deletar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

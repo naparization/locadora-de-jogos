@@ -26,5 +26,9 @@ namespace locadora_de_jogos.Repositores
             return registro;
         }
 
+        internal static async Task Adicionar(Registro registroGlobal)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

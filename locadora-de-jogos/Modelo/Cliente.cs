@@ -22,7 +22,7 @@ namespace GerenciamentoDeFuncionarios.Modelo
         public string Email { get; set; }
 
         [Required(ErrorMessage = "O campo Telefone é obrigatório.")]
-        [StringLength(9, MinimumLength = 9, ErrorMessage = "O Telefone deve conter pelo menos 9 dígitos.")]
+        [StringLength(11, MinimumLength = 11, ErrorMessage = "O Telefone deve ser válido.")]
         public string Telefone { get; set; }
 
         public DateTime DataCadastro { get; set; } 

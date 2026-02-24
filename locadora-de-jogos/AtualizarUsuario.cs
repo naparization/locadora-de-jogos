@@ -1,33 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GerenciamentoDeFuncionarios.Modelo;
 using GerenciamentoDeJogos.Modelo;
-using locadora_de_jogos.Modelo;
 using locadora_de_jogos.Repositores;
+using locadora_de_jogos.Modelo;
 using Timer = System.Windows.Forms.Timer;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace locadora_de_jogos
 {
-    public partial class CadastroUsuarios : Form
+    public partial class AtualizarUsuario : Form
     {
-        private Timer timer;
+        public Cliente clienteGlobal = new Cliente();
+        private Cliente clienteEdicao;
+        private readonly int idUsuario;
         private readonly TelaInicial telaInicial;
-        public Cliente clienteGlobal;
-        public CadastroUsuarios(TelaInicial telaInicial)
+        private Timer timer;
+        public AtualizarUsuario(int idUsuario, TelaInicial telaInicial)
         {
             InitializeComponent();
             IniciarTimer();
-
+            this.idUsuario = idUsuario;
             this.telaInicial = telaInicial;
+
+            Load += AtualizarUsuario_Load;
+
+            
+               
         }
 
         private void IniciarTimer()
@@ -47,7 +55,7 @@ namespace locadora_de_jogos
             cliente.Email = txtEmail.Text;
             cliente.Telefone = $"{txtDDD.Text.Replace("+", "").Replace(" ", "")}{txtTelefone.Text.Replace(" ", "").Replace("-", "")}";
             cliente.Genero = rbMasculino.Checked ? Genero.Masculino : rbFeminino.Checked ? Genero.Feminino : Genero.Outro;
-            
+
 
             var stringBuilder = new StringBuilder();
 
@@ -72,59 +80,52 @@ namespace locadora_de_jogos
             }
 
             clienteGlobal = cliente;
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private async void AtualizarUsuario_Load(object? sender, EventArgs e)
         {
+            this.clienteEdicao = await ClienteRepository.BuscarPorId(this.idUsuario);
 
-        }
+            txtNomeUsuario.Text = clienteEdicao.Nome;
+            txtCpf.Text = clienteEdicao.CPF;
+            txtEmail.Text = clienteEdicao.Email;
 
-        private void txtNomeJogo_TextChanged(object sender, EventArgs e)
-        {
+            switch(clienteEdicao.Genero){
+                case Genero.Masculino:
+                    rbMasculino.Checked = true;
+                    rbFeminino.Checked = false;
+                    rbOutro.Checked = false;
+                    break;
+                case Genero.Feminino:
+                    rbMasculino.Checked = false;
+                    rbFeminino.Checked = true;
+                    rbOutro.Checked = false;
+                    break;
+                case Genero.Outro:
+                    rbOutro.Checked = true;
+                    rbMasculino.Checked = false;
+                    rbFeminino.Checked= false;
+                    break;
+                default:
+                    rbMasculino.Checked = false;
+                    rbFeminino.Checked = false;
+                    rbOutro.Checked = false;
+                    break;
+            }
 
-        }
+            txtDDD.Text = clienteEdicao.Telefone.Substring(0, 2);
+            txtTelefone.Text = clienteEdicao.Telefone.Substring(2, 9);
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbRPG_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbShooter_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+            clienteGlobal = this.clienteEdicao;
+            clienteEdicao.Id = idUsuario;
+            clienteGlobal.Id = this.clienteEdicao.Id;
 
         }
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            Random aleatorio = new Random();
-            DateTime dataAtual = DateTime.Now;
-            clienteGlobal.DataCadastro = DateTime.Now;
-            string identificador = clienteGlobal.Nome.Substring(0, 2);
-            identificador = identificador + "-" + clienteGlobal.CPF.Substring(0,3);
-            identificador = identificador + "-" + dataAtual.Month.ToString();
-            clienteGlobal.IdentificadorUnico = identificador;
-            ClienteRepository.Adicionar(clienteGlobal);
+            clienteGlobal.Id = idUsuario;
+            await ClienteRepository.AtualizarPorId(clienteGlobal);
             await telaInicial.AtualizarTabela();
             this.Close();
         }

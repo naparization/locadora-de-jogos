@@ -87,26 +87,38 @@ namespace locadora_de_jogos
         {
             if (isAdmin)
             {
+                var tabela = dgvDados.SelectedRows[0].Cells[1].Value;
+
+                if (tabela == null)
+                {
+                    return;
+                }
+                        string tabelaNome = tabela.ToString();
+
+                
                 switch (option)
                 {
+
                     case 0:
-                        var tabela = dgvDados.SelectedRows[0].Cells[1].Value;
 
-                        if (tabela == null)
-                        {
-                            return;
-                        }
+                        var retornoJogo = MessageBox.Show($"Tem certeza que deseja excluir jogo {tabelaNome}?", "Excluir jogo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        string nomeJogo = tabela.ToString();
-
-                            var retorno = MessageBox.Show($"Tem certeza que deseja excluir jogo {nomeJogo}?", "Excluir jogo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        if (retorno == DialogResult.Yes)
+                        if (retornoJogo == DialogResult.Yes)
                         {
                             int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
                             await JogoRepository.DeletarJogo(idJogo);
                             await AtualizarTabela();
                             
+                        }
+                        break;
+                    case 1:
+                        var retornoCliente = MessageBox.Show($"Tem certeza que deseja excluir cliente {tabelaNome}?", "Excluir cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (retornoCliente == DialogResult.Yes)
+                        {
+                            int idCliente = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                            await ClienteRepository.DeletarCliente(idCliente);
+                            await AtualizarTabela();
+
                         }
                         break;
                     default:
@@ -123,12 +135,21 @@ namespace locadora_de_jogos
         {
             switch (option) {
                 case 0:
-                    int IdJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                    var atualizarJogo = new AtualizarJogo(IdJogo, this);
+                    int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                    var atualizarJogo = new AtualizarJogo(idJogo, this);
                     atualizarJogo.ShowDialog();
 
-                    break;                   
-                default:
+                    break;
+                case 1:
+                    int idUsuario = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                    var atualizarUsuario = new AtualizarUsuario(idUsuario, this);
+                    atualizarUsuario.ShowDialog();
+                    break;
+                case 2:
+                    int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                    //
+                    break;
+                default: 
                     break;
 
             } 
@@ -158,7 +179,7 @@ namespace locadora_de_jogos
                         this.Show();
                         break;
                     case 2:
-                        var cadastroRegistros = new CadastroRegistros();
+                        var cadastroRegistros = new CadastroRegistros(this);
                         this.Hide();
                         cadastroRegistros.ShowDialog();
                         this.Show();

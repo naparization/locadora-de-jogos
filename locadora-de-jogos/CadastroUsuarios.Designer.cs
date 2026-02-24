@@ -44,6 +44,8 @@
             btnSalvar = new Button();
             btnCancelar = new Button();
             txtErro = new Label();
+            txtDDD = new TextBox();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,7 +75,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(12, 197);
+            label3.Location = new Point(12, 189);
             label3.Name = "label3";
             label3.Size = new Size(0, 21);
             label3.TabIndex = 6;
@@ -151,7 +153,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(12, 184);
+            label4.Location = new Point(12, 176);
             label4.Name = "label4";
             label4.Size = new Size(37, 21);
             label4.TabIndex = 9;
@@ -159,7 +161,7 @@
             // 
             // txtCpf
             // 
-            txtCpf.Location = new Point(12, 208);
+            txtCpf.Location = new Point(12, 200);
             txtCpf.Name = "txtCpf";
             txtCpf.PlaceholderText = "000.000.000-00";
             txtCpf.Size = new Size(245, 23);
@@ -171,7 +173,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(12, 245);
+            label5.Location = new Point(55, 237);
             label5.Name = "label5";
             label5.Size = new Size(67, 21);
             label5.TabIndex = 11;
@@ -179,15 +181,15 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(12, 269);
+            txtTelefone.Location = new Point(58, 261);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.PlaceholderText = " 51 9999-9999";
-            txtTelefone.Size = new Size(245, 23);
+            txtTelefone.PlaceholderText = "0 0000-0000";
+            txtTelefone.Size = new Size(199, 23);
             txtTelefone.TabIndex = 12;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(11, 307);
+            btnSalvar.Location = new Point(11, 296);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 13;
@@ -197,7 +199,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(137, 307);
+            btnCancelar.Location = new Point(137, 296);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 14;
@@ -208,10 +210,29 @@
             // 
             txtErro.AutoSize = true;
             txtErro.ForeColor = Color.Red;
-            txtErro.Location = new Point(5, 366);
+            txtErro.Location = new Point(5, 359);
             txtErro.Name = "txtErro";
             txtErro.Size = new Size(0, 15);
             txtErro.TabIndex = 15;
+            // 
+            // txtDDD
+            // 
+            txtDDD.Location = new Point(10, 261);
+            txtDDD.Name = "txtDDD";
+            txtDDD.PlaceholderText = "+ 00";
+            txtDDD.Size = new Size(39, 23);
+            txtDDD.TabIndex = 16;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(5, 237);
+            label6.Name = "label6";
+            label6.Size = new Size(43, 21);
+            label6.TabIndex = 17;
+            label6.Text = "DDD";
             // 
             // CadastroUsuarios
             // 
@@ -219,6 +240,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 465);
+            Controls.Add(label6);
+            Controls.Add(txtDDD);
             Controls.Add(txtErro);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
@@ -257,5 +280,7 @@
         private Button btnSalvar;
         private Button btnCancelar;
         private Label txtErro;
+        private TextBox txtDDD;
+        private Label label6;
     }
 }
