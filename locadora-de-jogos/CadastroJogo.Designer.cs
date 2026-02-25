@@ -41,7 +41,12 @@
             btnSalvar = new Button();
             btnCancelar = new Button();
             txtErro = new Label();
+            groupBox2 = new GroupBox();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -147,7 +152,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(11, 246);
+            btnSalvar.Location = new Point(10, 292);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 8;
@@ -157,7 +162,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(137, 246);
+            btnCancelar.Location = new Point(136, 292);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 9;
@@ -169,17 +174,64 @@
             // 
             txtErro.AutoSize = true;
             txtErro.ForeColor = Color.Red;
-            txtErro.Location = new Point(5, 309);
+            txtErro.Location = new Point(7, 356);
             txtErro.Name = "txtErro";
             txtErro.Size = new Size(0, 15);
             txtErro.TabIndex = 10;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.White;
+            groupBox2.Controls.Add(radioButton3);
+            groupBox2.Controls.Add(radioButton2);
+            groupBox2.Controls.Add(radioButton1);
+            groupBox2.Location = new Point(11, 230);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(246, 56);
+            groupBox2.TabIndex = 11;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Categoria";
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(30, 23);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(61, 19);
+            radioButton1.TabIndex = 12;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Bronze";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(94, 23);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(52, 19);
+            radioButton2.TabIndex = 12;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Prata";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(152, 23);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(52, 19);
+            radioButton3.TabIndex = 12;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Ouro";
+            radioButton3.UseVisualStyleBackColor = true;
             // 
             // CadastroJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(269, 392);
+            ClientSize = new Size(269, 454);
+            Controls.Add(groupBox2);
             Controls.Add(txtErro);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
@@ -194,6 +246,8 @@
             Text = "Cadastro Jogo";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -213,5 +267,9 @@
         private Button btnSalvar;
         private Button btnCancelar;
         private Label txtErro;
+        private GroupBox groupBox2;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
