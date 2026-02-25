@@ -19,6 +19,7 @@ namespace locadora_de_jogos.Repositores
                     Id,
                     Titulo,
                     IdGenero AS Genero,
+                    Categoria,
                     Preco,
                     DataLancamento
                   FROM
@@ -32,8 +33,8 @@ namespace locadora_de_jogos.Repositores
         {
             await bancoDeDados.CriarConexao().QueryAsync(
                 @"
-                    INSERT INTO Jogos (Titulo, IdGenero, Preco, DataLancamento)
-                    VALUES (@Titulo, @Genero, @Preco, @DataLancamento);
+                    INSERT INTO Jogos (Titulo, IdGenero, Preco, Categoria, DataLancamento)
+                    VALUES (@Titulo, @Genero, @Preco, @Categoria, @DataLancamento);
                 ", jogo);
         }
 
@@ -65,6 +66,7 @@ namespace locadora_de_jogos.Repositores
                         Titulo,
                         IdGenero AS Genero,
                         Preco,
+                        Categoria,
                         DataLancamento
                 FROM
                     Jogos
@@ -84,6 +86,7 @@ namespace locadora_de_jogos.Repositores
                     Titulo = @Titulo,
                     IdGenero = @Genero,
                     Preco = @Preco,
+                    Categoria = @Categoria
                     DataLancamento = @DataLancamento
                     WHERE Id = @Id
                 ", jogoUniversal

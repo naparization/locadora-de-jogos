@@ -1,4 +1,6 @@
-﻿namespace GerenciamentoDeRegistros.Modelo
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GerenciamentoDeRegistros.Modelo
 {
     public class Registro
     {

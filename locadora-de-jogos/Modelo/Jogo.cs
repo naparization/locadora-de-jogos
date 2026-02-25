@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using GerenciamentoDeFuncionarios.Modelo;
 using GerenciamentoDeGenero.Modelo;
+using locadora_de_jogos.Modelo;
 
 namespace GerenciamentoDeJogos.Modelo
 {
@@ -15,6 +16,8 @@ namespace GerenciamentoDeJogos.Modelo
         public GeneroJogo Genero { get; set; }
 
         public decimal Preco { get; set; }
+
+        public CategoriaJogo Categoria { get; set; }
 
         public DateTime DataLancamento { get; set; }
     }

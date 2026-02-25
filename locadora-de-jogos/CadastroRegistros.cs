@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GerenciamentoDeFuncionarios.Modelo;
+using GerenciamentoDeJogos.Modelo;
 using GerenciamentoDeRegistros.Modelo;
+using locadora_de_jogos.Modelo;
 using locadora_de_jogos.Repositores;
 
 namespace locadora_de_jogos
@@ -20,12 +22,14 @@ namespace locadora_de_jogos
         private readonly TelaInicial telaInicial;
         public Cliente clienteGlobal;
         public Registro registroGlobal;
+        public Jogo jogoGlobal;
         public string nomeCliente;
         public string nomeJogo;
         public CadastroRegistros(TelaInicial telaInicial)
         {
             this.telaInicial = telaInicial;
             this.registroGlobal = new Registro();
+            this.jogoGlobal = new Jogo();
             
 
             InitializeComponent();
@@ -44,7 +48,23 @@ namespace locadora_de_jogos
             registroGlobal.NomeDoUsuario = txtIdUsuario.Text;
             registroGlobal.NomeDoJogo = txtIdJogo.Text;
             registroGlobal.DataAluguel = dataDoRegistro;
-            registroGlobal.DataDevolucao = dataDoRegistro.AddDays(30);
+            int idDoJogo = int.Parse(txtIdJogo.Text);
+            jogoGlobal = await JogoRepository.BuscarPorId(idDoJogo);
+            switch (jogoGlobal.Categoria)
+            {
+                case CategoriaJogo.Bronze:
+                    registroGlobal.DataDevolucao = dataDoRegistro.AddDays(30);
+                    break;
+                case CategoriaJogo.Prata:
+                    registroGlobal.DataDevolucao = dataDoRegistro.AddDays(14);
+                    break;
+                case CategoriaJogo.Ouro:
+                    registroGlobal.DataDevolucao = dataDoRegistro.AddDays(7);
+                    break;
+                default:
+                    MessageBox.Show("Algo deu errado.");
+                    break;
+            }
             string dataParaDevolver = registroGlobal.DataDevolucao.ToString();
             await RegistroRepository.Adicionar(registroGlobal);
             await telaInicial.AtualizarTabela();
@@ -63,13 +83,13 @@ namespace locadora_de_jogos
                 if (clienteNome == null)
                 {
                     txtNomeCliente.Text = "Usuário: Não definido";
-                    btnSalvar.Enabled = false;
+                    
                 }
                 else
                 {
                     txtNomeCliente.Text = "Usuário: " + clienteNome.Nome.ToString();
                     nomeCliente = clienteNome.Nome.ToString();
-                    btnSalvar.Enabled = true;
+                    
                 }
 
 
@@ -88,13 +108,13 @@ namespace locadora_de_jogos
                 if (jogoNome == null)
                 {
                     txtNomeJogo.Text = "Jogo: Não definido";
-                    btnSalvar.Enabled = false;
+                    
                 }
                 else
                 {
                     txtNomeJogo.Text = "Jogo: " + jogoNome.Titulo.ToString();
                     nomeJogo = jogoNome.Titulo.ToString();
-                    btnSalvar.Enabled = true;
+                    
                 }
             }
             catch (Exception)
@@ -102,9 +122,12 @@ namespace locadora_de_jogos
                 btnSalvar.Enabled = false;
             }
 
-            if (txtNomeJogo == null || txtNomeCliente == null)
+            if (txtNomeJogo.Text.Length < 1 || txtNomeCliente.Text.Length < 1)
             {
                 btnSalvar.Enabled = false;
+            } else
+            {
+                btnSalvar.Enabled = true;
             }
 
 

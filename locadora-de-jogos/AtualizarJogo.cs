@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GerenciamentoDeGenero.Modelo;
 using GerenciamentoDeJogos.Modelo;
+using locadora_de_jogos.Modelo;
 using locadora_de_jogos.Repositores;
 using Timer = System.Windows.Forms.Timer;
 
@@ -50,6 +51,7 @@ namespace locadora_de_jogos
             var jogo = new Jogo();
 
             jogo.Genero = rbAcao.Checked ? GeneroJogo.Acao : rbRPG.Checked ? GeneroJogo.RPG : GeneroJogo.Shooter;
+            jogo.Categoria = rbBronze.Checked ? CategoriaJogo.Bronze : rbPrata.Checked ? CategoriaJogo.Prata : CategoriaJogo.Ouro;
             jogo.DataLancamento = dtLancamento.Value;
             jogo.Titulo = txtNomeJogo.Text;
 
@@ -107,6 +109,22 @@ namespace locadora_de_jogos
                     break;
                 default:
                     //
+                    break;
+            }
+
+            switch (jogoEdicao.Categoria)
+            {
+                case CategoriaJogo.Bronze:
+                    rbBronze.Checked = true;
+                    break;
+                case CategoriaJogo.Prata:
+                    rbPrata.Checked = true;
+                    break;
+                case CategoriaJogo.Ouro:
+                    rbOuro.Checked = true;
+                    break;
+                default:
+                    rbBronze.Checked = true;
                     break;
             }
             dtLancamento.Value = jogoEdicao.DataLancamento;

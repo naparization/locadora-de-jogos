@@ -41,7 +41,12 @@
             txtPreco = new TextBox();
             label3 = new Label();
             txtErro = new Label();
+            groupBox2 = new GroupBox();
+            rbOuro = new RadioButton();
+            rbPrata = new RadioButton();
+            rbBronze = new RadioButton();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -108,7 +113,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(137, 246);
+            btnCancelar.Location = new Point(136, 292);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 15;
@@ -118,7 +123,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(11, 246);
+            btnSalvar.Location = new Point(10, 292);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 14;
@@ -167,17 +172,61 @@
             // 
             txtErro.AutoSize = true;
             txtErro.ForeColor = Color.Red;
-            txtErro.Location = new Point(5, 309);
+            txtErro.Location = new Point(5, 354);
             txtErro.Name = "txtErro";
             txtErro.Size = new Size(0, 15);
             txtErro.TabIndex = 16;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.White;
+            groupBox2.Controls.Add(rbOuro);
+            groupBox2.Controls.Add(rbPrata);
+            groupBox2.Controls.Add(rbBronze);
+            groupBox2.Location = new Point(11, 230);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(246, 56);
+            groupBox2.TabIndex = 17;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Categoria";
+            // 
+            // rbOuro
+            // 
+            rbOuro.AutoSize = true;
+            rbOuro.Location = new Point(152, 23);
+            rbOuro.Name = "rbOuro";
+            rbOuro.Size = new Size(52, 19);
+            rbOuro.TabIndex = 12;
+            rbOuro.Text = "Ouro";
+            rbOuro.UseVisualStyleBackColor = true;
+            // 
+            // rbPrata
+            // 
+            rbPrata.AutoSize = true;
+            rbPrata.Location = new Point(94, 23);
+            rbPrata.Name = "rbPrata";
+            rbPrata.Size = new Size(52, 19);
+            rbPrata.TabIndex = 12;
+            rbPrata.Text = "Prata";
+            rbPrata.UseVisualStyleBackColor = true;
+            // 
+            // rbBronze
+            // 
+            rbBronze.AutoSize = true;
+            rbBronze.Location = new Point(30, 23);
+            rbBronze.Name = "rbBronze";
+            rbBronze.Size = new Size(61, 19);
+            rbBronze.TabIndex = 12;
+            rbBronze.Text = "Bronze";
+            rbBronze.UseVisualStyleBackColor = true;
             // 
             // AtualizarJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(269, 392);
+            ClientSize = new Size(269, 454);
+            Controls.Add(groupBox2);
             Controls.Add(txtErro);
             Controls.Add(btnCancelar);
             Controls.Add(groupBox1);
@@ -192,6 +241,8 @@
             Text = "Atualizar Jogo";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +262,9 @@
         private TextBox txtPreco;
         private Label label3;
         private Label txtErro;
+        private GroupBox groupBox2;
+        private RadioButton rbOuro;
+        private RadioButton rbPrata;
+        private RadioButton rbBronze;
     }
 }

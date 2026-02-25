@@ -42,9 +42,9 @@
             btnCancelar = new Button();
             txtErro = new Label();
             groupBox2 = new GroupBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
+            rbOuro = new RadioButton();
+            rbPrata = new RadioButton();
+            rbBronze = new RadioButton();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -182,9 +182,9 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.White;
-            groupBox2.Controls.Add(radioButton3);
-            groupBox2.Controls.Add(radioButton2);
-            groupBox2.Controls.Add(radioButton1);
+            groupBox2.Controls.Add(rbOuro);
+            groupBox2.Controls.Add(rbPrata);
+            groupBox2.Controls.Add(rbBronze);
             groupBox2.Location = new Point(11, 230);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(246, 56);
@@ -192,38 +192,38 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Categoria";
             // 
-            // radioButton1
+            // rbOuro
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(30, 23);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(61, 19);
-            radioButton1.TabIndex = 12;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Bronze";
-            radioButton1.UseVisualStyleBackColor = true;
+            rbOuro.AutoSize = true;
+            rbOuro.Location = new Point(152, 23);
+            rbOuro.Name = "rbOuro";
+            rbOuro.Size = new Size(52, 19);
+            rbOuro.TabIndex = 12;
+            rbOuro.Text = "Ouro";
+            rbOuro.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbPrata
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(94, 23);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(52, 19);
-            radioButton2.TabIndex = 12;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Prata";
-            radioButton2.UseVisualStyleBackColor = true;
+            rbPrata.AutoSize = true;
+            rbPrata.Location = new Point(94, 23);
+            rbPrata.Name = "rbPrata";
+            rbPrata.Size = new Size(52, 19);
+            rbPrata.TabIndex = 12;
+            rbPrata.Text = "Prata";
+            rbPrata.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbBronze
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(152, 23);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(52, 19);
-            radioButton3.TabIndex = 12;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Ouro";
-            radioButton3.UseVisualStyleBackColor = true;
+            rbBronze.AutoSize = true;
+            rbBronze.Checked = true;
+            rbBronze.Location = new Point(30, 23);
+            rbBronze.Name = "rbBronze";
+            rbBronze.Size = new Size(61, 19);
+            rbBronze.TabIndex = 12;
+            rbBronze.TabStop = true;
+            rbBronze.Text = "Bronze";
+            rbBronze.UseVisualStyleBackColor = true;
+            rbBronze.CheckedChanged += rbBronze_CheckedChanged;
             // 
             // CadastroJogo
             // 
@@ -268,8 +268,8 @@
         private Button btnCancelar;
         private Label txtErro;
         private GroupBox groupBox2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton rbOuro;
+        private RadioButton rbPrata;
+        private RadioButton rbBronze;
     }
 }

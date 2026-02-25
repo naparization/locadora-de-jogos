@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using GerenciamentoDeFuncionarios.Modelo;
 using GerenciamentoDeGenero.Modelo;
 using GerenciamentoDeJogos.Modelo;
+using locadora_de_jogos.Modelo;
 using locadora_de_jogos.Repositores;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -47,6 +48,7 @@ namespace locadora_de_jogos
             var jogo = new Jogo();
 
             jogo.Genero = rbAcao.Checked ? GeneroJogo.Acao : rbRPG.Checked ? GeneroJogo.RPG : GeneroJogo.Shooter;
+            jogo.Categoria = rbBronze.Checked ? CategoriaJogo.Bronze : rbPrata.Checked ? CategoriaJogo.Prata : CategoriaJogo.Ouro;
             jogo.DataLancamento = dtLancamento.Value;
             jogo.Titulo = txtNomeJogo.Text;
 
@@ -87,7 +89,7 @@ namespace locadora_de_jogos
 
         private async Task button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -96,13 +98,18 @@ namespace locadora_de_jogos
 
         }
 
-        
+
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
             JogoRepository.Adicionar(jogoUniversal);
             await telaInicial.AtualizarTabela();
             this.Close();
+        }
+
+        private void rbBronze_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
