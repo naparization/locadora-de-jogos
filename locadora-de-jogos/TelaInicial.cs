@@ -18,11 +18,13 @@ namespace locadora_de_jogos
     public partial class TelaInicial : Form
     {
         private readonly bool isAdmin;
+        private readonly string idUsuario;
         public byte option;
-        public TelaInicial(bool isAdmin)
+        public TelaInicial(bool isAdmin, string idUsuario)
         {
             
             this.isAdmin = isAdmin;
+            this.idUsuario = idUsuario;
             this.option = 0;
                 InitializeComponent();
             // botão multifuncional, caso seja Admin o layout é Novo/Editar/Excluir
@@ -64,8 +66,16 @@ namespace locadora_de_jogos
                     dgvDados.DataSource = new BindingList<Jogo>(jogos.ToList());
                     break;
                 case 1:
-                    var clientes = await ClienteRepository.ObterClientes();
-                    dgvDados.DataSource = new BindingList<Cliente>(clientes.ToList());
+                    if (isAdmin)
+                    {
+                        var clientes = await ClienteRepository.ObterClientes();
+                        dgvDados.DataSource = new BindingList<Cliente>(clientes.ToList());
+                    } else
+                    {
+                        var cliente = await ClienteRepository.BuscarPorIdentificador(idUsuario);
+                        dgvDados.DataSource = new BindingList<Cliente> { cliente };
+                    }
+
                     break;
                 case 2:
                     // tabela registros
@@ -124,6 +134,22 @@ namespace locadora_de_jogos
                     default:
                         MessageBox.Show("Não definido.");
                         break;
+                    case 2:
+                        var tabela2 = dgvDados.SelectedRows[0].Cells[2].Value;
+
+                        if (tabela2 == null)
+                        {
+                            return;
+                        }
+                        string tabelaNome2 = tabela2.ToString();
+                        var retornoRegistro = MessageBox.Show($"Tem certeza que deseja excluir este registro? \n[{tabelaNome}, {tabelaNome2}]", "Excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (retornoRegistro == DialogResult.Yes)
+                        {
+                            int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                            await RegistroRepository.DeletarRegistro(idRegistro);
+                            await AtualizarTabela();
+                        }
+                        break;
                 }
             } else
             {
@@ -147,7 +173,8 @@ namespace locadora_de_jogos
                     break;
                 case 2:
                     int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                    //
+                    var atualizarRegistro = new AtualizarRegistro(idRegistro, this);
+                    atualizarRegistro.ShowDialog();
                     break;
                 default: 
                     break;

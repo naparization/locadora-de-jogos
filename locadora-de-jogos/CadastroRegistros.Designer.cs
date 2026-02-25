@@ -34,11 +34,10 @@
             txtIdJogo = new TextBox();
             btnSalvar = new Button();
             btnCancelar = new Button();
-            label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
             txtNomeCliente = new Label();
             txtNomeJogo = new Label();
+            dtDataRegistro = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -103,28 +102,7 @@
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(77, 122);
-            label3.Name = "label3";
-            label3.Size = new Size(113, 17);
-            label3.TabIndex = 16;
-            label3.Text = "Nome do Usuário";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(84, 192);
-            label4.Name = "label4";
-            label4.Size = new Size(97, 17);
-            label4.TabIndex = 17;
-            label4.Text = "Nome do Jogo";
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // label5
             // 
@@ -142,7 +120,7 @@
             // 
             txtNomeCliente.AutoSize = true;
             txtNomeCliente.ForeColor = Color.White;
-            txtNomeCliente.Location = new Point(3, 284);
+            txtNomeCliente.Location = new Point(11, 121);
             txtNomeCliente.Name = "txtNomeCliente";
             txtNomeCliente.Size = new Size(122, 15);
             txtNomeCliente.TabIndex = 19;
@@ -152,11 +130,18 @@
             // 
             txtNomeJogo.AutoSize = true;
             txtNomeJogo.ForeColor = Color.White;
-            txtNomeJogo.Location = new Point(3, 304);
+            txtNomeJogo.Location = new Point(13, 191);
             txtNomeJogo.Name = "txtNomeJogo";
             txtNomeJogo.Size = new Size(107, 15);
             txtNomeJogo.TabIndex = 20;
             txtNomeJogo.Text = "Jogo: Não definido";
+            // 
+            // dtDataRegistro
+            // 
+            dtDataRegistro.Location = new Point(33, 282);
+            dtDataRegistro.Name = "dtDataRegistro";
+            dtDataRegistro.Size = new Size(200, 23);
+            dtDataRegistro.TabIndex = 21;
             // 
             // CadastroRegistros
             // 
@@ -164,11 +149,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 392);
+            Controls.Add(dtDataRegistro);
             Controls.Add(txtNomeJogo);
             Controls.Add(txtNomeCliente);
             Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(txtIdJogo);
@@ -189,10 +173,9 @@
         private TextBox txtIdJogo;
         private Button btnSalvar;
         private Button btnCancelar;
-        private Label label3;
-        private Label label4;
         private Label label5;
         private Label txtNomeCliente;
         private Label txtNomeJogo;
+        private DateTimePicker dtDataRegistro;
     }
 }

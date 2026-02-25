@@ -20,9 +20,13 @@ namespace locadora_de_jogos
         private readonly TelaInicial telaInicial;
         public Cliente clienteGlobal;
         public Registro registroGlobal;
+        public string nomeCliente;
+        public string nomeJogo;
         public CadastroRegistros(TelaInicial telaInicial)
         {
             this.telaInicial = telaInicial;
+            this.registroGlobal = new Registro();
+            
 
             InitializeComponent();
 
@@ -36,12 +40,16 @@ namespace locadora_de_jogos
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            DateTime dataHoje = DateTime.Now;
+            DateTime dataDoRegistro = dtDataRegistro.Value;
             registroGlobal.NomeDoUsuario = txtIdUsuario.Text;
             registroGlobal.NomeDoJogo = txtIdJogo.Text;
-            registroGlobal.DataAluguel = dataHoje;
-            registroGlobal.DataDevolucao = dataHoje.AddDays(30);
+            registroGlobal.DataAluguel = dataDoRegistro;
+            registroGlobal.DataDevolucao = dataDoRegistro.AddDays(30);
+            string dataParaDevolver = registroGlobal.DataDevolucao.ToString();
             await RegistroRepository.Adicionar(registroGlobal);
+            await telaInicial.AtualizarTabela();
+            MessageBox.Show($"Jogo {nomeJogo} alugado manualmente para cliente {nomeCliente}. Ele deve ser devolvido até {dataParaDevolver}", "Registro Concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private async void txtIdUsuario_TextChanged(object sender, EventArgs e)
@@ -49,23 +57,27 @@ namespace locadora_de_jogos
             try
             {
                 idCliente = int.Parse(txtIdUsuario.Text);
-                
+
                 var clienteNome = await ClienteRepository.BuscarPorId(idCliente);
-                
+
                 if (clienteNome == null)
                 {
                     txtNomeCliente.Text = "Usuário: Não definido";
                     btnSalvar.Enabled = false;
-                } else
+                }
+                else
                 {
                     txtNomeCliente.Text = "Usuário: " + clienteNome.Nome.ToString();
+                    nomeCliente = clienteNome.Nome.ToString();
                     btnSalvar.Enabled = true;
                 }
 
-                
-                    
 
-            } catch (Exception) {
+
+
+            }
+            catch (Exception)
+            {
                 btnSalvar.Enabled = false;
             }
 
@@ -81,9 +93,11 @@ namespace locadora_de_jogos
                 else
                 {
                     txtNomeJogo.Text = "Jogo: " + jogoNome.Titulo.ToString();
+                    nomeJogo = jogoNome.Titulo.ToString();
                     btnSalvar.Enabled = true;
                 }
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 btnSalvar.Enabled = false;
             }
@@ -92,8 +106,13 @@ namespace locadora_de_jogos
             {
                 btnSalvar.Enabled = false;
             }
-            
-            
+
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

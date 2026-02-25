@@ -4,6 +4,9 @@
     <Compile Update="AtualizarJogo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AtualizarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AtualizarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

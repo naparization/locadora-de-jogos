@@ -21,7 +21,7 @@ namespace locadora_de_jogos
         {
             if (txtUsuario.Text == "Admin" && txtSenha.Text == "1234")
             {
-                TelaInicial telaInicial = new TelaInicial(true);
+                TelaInicial telaInicial = new TelaInicial(true, "admin");
                 this.Hide();
                 telaInicial.ShowDialog();
             } else

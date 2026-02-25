@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GerenciamentoDeFuncionarios.Modelo;
+using locadora_de_jogos.Repositores;
 
 namespace locadora_de_jogos
 {
@@ -17,11 +19,20 @@ namespace locadora_de_jogos
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private async void btnEntrar_Click(object sender, EventArgs e)
         {
-            TelaInicial telaInicial = new TelaInicial(false);
-            this.Hide();
-            telaInicial.ShowDialog();
+            Cliente usuarioLogin = await ClienteRepository.BuscarPorIdentificador(txtUsuario.Text);
+
+            if (usuarioLogin != null)
+            {
+                TelaInicial telaInicial = new TelaInicial(false, usuarioLogin.IdentificadorUnico);
+                this.Hide();
+                telaInicial.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Identificador inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

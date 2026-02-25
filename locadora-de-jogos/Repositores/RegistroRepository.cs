@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using GerenciamentoDeFuncionarios.Banco.Configuracao;
+using GerenciamentoDeJogos.Modelo;
 using GerenciamentoDeRegistros.Modelo;
 
 namespace locadora_de_jogos.Repositores
@@ -26,9 +27,60 @@ namespace locadora_de_jogos.Repositores
             return registro;
         }
 
-        internal static async Task Adicionar(Registro registroGlobal)
+        internal static async Task Adicionar(Registro registro)
         {
-            throw new NotImplementedException();
+            await bancoDeDados.CriarConexao().QueryAsync<Registro>(
+               @"
+                    INSERT INTO Registros (IdUsuario, IdJogo, DataAluguel, DataDevolucao)
+                    VALUES (@NomeDoUsuario, @NomeDoJogo, @DataAluguel, @DataDevolucao);
+                ", registro);
+        }
+
+        public static async Task<Registro> BuscarPorId(int idRegistro)
+        {
+            var registro = await bancoDeDados.CriarConexao()
+                .QueryFirstOrDefaultAsync<Registro>(
+                @"
+                    SELECT
+                        Id,
+                        DataDevolucao
+                FROM
+                    Registros
+                WHERE
+                    Id = @Id
+                ", new { Id = idRegistro });
+
+            return registro;
+        }
+
+        internal static async Task AtualizarPorId(Registro registro)
+        {
+            await bancoDeDados.CriarConexao().QueryAsync(
+               @"
+                    UPDATE Registros
+                    SET
+                    DataDevolucao = @DataDevolucao
+                    WHERE Id = @Id
+                ", registro
+
+               );
+        }
+
+        internal static async Task DeletarRegistro(int idRegistro)
+        {
+            try
+            {
+                await bancoDeDados.CriarConexao().QueryAsync(
+                @"
+                    DELETE FROM Registros
+                    WHERE id = @Id
+                ", new { Id = idRegistro });
+                MessageBox.Show($"Registrado deletado com sucesso.", "Excluir registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
     }
 }
