@@ -74,63 +74,7 @@ namespace locadora_de_jogos
 
         private async void txtIdUsuario_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                idCliente = int.Parse(txtIdUsuario.Text);
-
-                var clienteNome = await ClienteRepository.BuscarPorId(idCliente);
-
-                if (clienteNome == null)
-                {
-                    txtNomeCliente.Text = "Usuário: Não definido";
-                    
-                }
-                else
-                {
-                    txtNomeCliente.Text = "Usuário: " + clienteNome.Nome.ToString();
-                    nomeCliente = clienteNome.Nome.ToString();
-                    
-                }
-
-
-
-
-            }
-            catch (Exception)
-            {
-                btnSalvar.Enabled = false;
-            }
-
-            try
-            {
-                idJogo = int.Parse(txtIdJogo.Text);
-                var jogoNome = await JogoRepository.BuscarPorId(idJogo);
-                if (jogoNome == null)
-                {
-                    txtNomeJogo.Text = "Jogo: Não definido";
-                    
-                }
-                else
-                {
-                    txtNomeJogo.Text = "Jogo: " + jogoNome.Titulo.ToString();
-                    nomeJogo = jogoNome.Titulo.ToString();
-                    
-                }
-            }
-            catch (Exception)
-            {
-                btnSalvar.Enabled = false;
-            }
-
-            if (txtNomeJogo.Text.Length < 1 || txtNomeCliente.Text.Length < 1)
-            {
-                btnSalvar.Enabled = false;
-            } else
-            {
-                btnSalvar.Enabled = true;
-            }
-
-
+            // Re-implementar
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
