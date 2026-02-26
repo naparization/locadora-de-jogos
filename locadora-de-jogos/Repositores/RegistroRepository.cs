@@ -53,6 +53,26 @@ namespace locadora_de_jogos.Repositores
             return registro;
         }
 
+        public static async Task<IEnumerable<Registro>> BuscarPorIdentificador(string identificador)
+        {
+            var registro = await bancoDeDados.CriarConexao().QueryAsync<Registro>(
+                @"
+                   SELECT 
+                    R.Id,
+                    U.Nome as NomeDoUsuario,
+                    J.Titulo AS NomeDoJogo,
+                    R.DataAluguel,
+                    R.DataDevolucao,
+                    R.IdUsuario
+                    FROM Registros R
+                    INNER JOIN Usuarios U ON R.IdUsuario = U.Id
+                    INNER JOIN Jogos J ON R.IdJogo = J.Id
+                    WHERE U.IdentificadorUnico = @IdentificadorUnico;
+                ", new {IdentificadorUnico = identificador});
+            return registro;
+        }
+
+
         internal static async Task AtualizarPorId(Registro registro)
         {
             await bancoDeDados.CriarConexao().QueryAsync(

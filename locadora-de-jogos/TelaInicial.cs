@@ -79,11 +79,19 @@ namespace locadora_de_jogos
                     break;
                 case 2:
                     // tabela registros
-                    var registros = await RegistroRepository.ObterRegistros();
-                    dgvDados.DataSource = new BindingList<Registro>(registros.ToList());
-                    break;
+                    if (isAdmin)
+                    {
+                        var registros = await RegistroRepository.ObterRegistros();
+                        dgvDados.DataSource = new BindingList<Registro>(registros.ToList());
+                    } else
+                    {
+                        var registros = await RegistroRepository.BuscarPorIdentificador(idUsuario);
+                        dgvDados.DataSource = new BindingList<Registro>(registros.ToList());
+                    }
+
+                        break;
                 default:
-                    // deu merda
+                    // deu errado
                     var padrao = await JogoRepository.ObterJogos();
                     dgvDados.DataSource = new BindingList<Jogo>(padrao.ToList());
                     break;
@@ -218,8 +226,11 @@ namespace locadora_de_jogos
                         break;
                 }
                 return;
-            }
+            } 
             // código do usuário padrão 
+            int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+            var alugarJogo = new AlugarJogo(idJogo, this);
+            alugarJogo.ShowDialog();
         }
 
         private async void btnRegistro_Click(object sender, EventArgs e)

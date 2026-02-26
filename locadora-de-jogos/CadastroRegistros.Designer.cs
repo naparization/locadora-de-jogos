@@ -79,7 +79,7 @@
             txtIdJogo.PlaceholderText = "ex: 1";
             txtIdJogo.Size = new Size(246, 23);
             txtIdJogo.TabIndex = 7;
-            txtIdJogo.TextChanged += txtIdUsuario_TextChanged;
+            txtIdJogo.TextChanged += txtIdJogo_TextChanged;
             // 
             // btnSalvar
             // 

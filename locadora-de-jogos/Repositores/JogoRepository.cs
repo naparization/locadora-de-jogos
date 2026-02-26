@@ -86,7 +86,7 @@ namespace locadora_de_jogos.Repositores
                     Titulo = @Titulo,
                     IdGenero = @Genero,
                     Preco = @Preco,
-                    Categoria = @Categoria
+                    Categoria = @Categoria,
                     DataLancamento = @DataLancamento
                     WHERE Id = @Id
                 ", jogoUniversal

@@ -12,12 +12,16 @@ using GerenciamentoDeJogos.Modelo;
 using GerenciamentoDeRegistros.Modelo;
 using locadora_de_jogos.Modelo;
 using locadora_de_jogos.Repositores;
+using Timer = System.Windows.Forms.Timer;
 
 namespace locadora_de_jogos
 {
     public partial class CadastroRegistros : Form
     {
         public int idCliente;
+        public bool usuarioOK;
+        public bool jogoOK;
+        private Timer frameTimer;
         public int idJogo;
         private readonly TelaInicial telaInicial;
         public Cliente clienteGlobal;
@@ -29,12 +33,34 @@ namespace locadora_de_jogos
         {
             this.telaInicial = telaInicial;
             this.registroGlobal = new Registro();
+            this.jogoOK = false;
+            this.usuarioOK = false;
             this.jogoGlobal = new Jogo();
-            
+
 
             InitializeComponent();
+            IniciarTimer();
 
 
+        }
+
+        private void IniciarTimer()
+        {
+            frameTimer = new Timer();
+            frameTimer.Interval = 60;
+            frameTimer.Tick += FazerValidacao;
+            frameTimer.Start();
+        }
+
+        private void FazerValidacao(object? sender, EventArgs e)
+        {
+            if (jogoOK == true && usuarioOK == true)
+            {
+                btnSalvar.Enabled = true;
+            } else
+            {
+                btnSalvar.Enabled = false;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,12 +100,65 @@ namespace locadora_de_jogos
 
         private async void txtIdUsuario_TextChanged(object sender, EventArgs e)
         {
-            // Re-implementar
+            int idUsuario;
+            try
+            {
+                idUsuario = int.Parse(txtIdUsuario.Text);
+
+            } catch (Exception)
+            {
+                idUsuario = 0;
+                usuarioOK = false;
+            }
+
+            var nomeDoCliente = await ClienteRepository.BuscarPorId(idUsuario);
+
+            if (nomeDoCliente != null && nomeDoCliente.Nome.Length > 0) 
+            {
+                txtNomeCliente.Text = $"Usuário: {nomeDoCliente.Nome}";
+                nomeCliente = nomeDoCliente.Nome;
+                usuarioOK = true;
+
+            } else
+            {
+                txtNomeCliente.Text = "Usuário: Não definido";
+                usuarioOK = false;
+            }
+            
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void txtIdJogo_TextChanged(object sender, EventArgs e)
+        {
+            int idJogo;
+            try
+            {
+                idJogo = int.Parse(txtIdJogo.Text);
+            }
+            catch (Exception)
+            {
+                idJogo = 0;
+                jogoOK = false;
+            }
+
+            var nomeDoJogo = await JogoRepository.BuscarPorId(idJogo);
+
+            if (nomeDoJogo != null && nomeDoJogo.Titulo.Length > 0)
+            {
+                txtNomeJogo.Text = $"Jogo: {nomeDoJogo.Titulo}";
+                nomeJogo = nomeDoJogo.Titulo;
+                jogoOK = true;
+            } else
+            {
+                txtNomeJogo.Text = "Jogo: Não definido";
+                jogoOK = false;
+            }
         }
     }
 }
