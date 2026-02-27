@@ -20,6 +20,7 @@ namespace locadora_de_jogos
     public partial class CadastroUsuarios : Form
     {
         private Timer timer;
+        public int anos;
         private readonly TelaInicial telaInicial;
         public Cliente clienteGlobal;
         public CadastroUsuarios(TelaInicial telaInicial)
@@ -28,6 +29,7 @@ namespace locadora_de_jogos
             IniciarTimer();
 
             this.telaInicial = telaInicial;
+            this.anos = 0;
         }
 
         private void IniciarTimer()
@@ -47,9 +49,16 @@ namespace locadora_de_jogos
             cliente.Email = txtEmail.Text;
             cliente.Telefone = $"{txtDDD.Text.Replace("+", "").Replace(" ", "")}{txtTelefone.Text.Replace(" ", "").Replace("-", "")}";
             cliente.Genero = rbMasculino.Checked ? Genero.Masculino : rbFeminino.Checked ? Genero.Feminino : Genero.Outro;
-            
-
+            cliente.DataNascimento = dtNascimento.Value;
+            DateTime dataAtual = DateTime.Now;
             var stringBuilder = new StringBuilder();
+
+            anos = dataAtual.Year - cliente.DataNascimento.Year;
+
+            if (dataAtual < cliente.DataNascimento.AddYears(anos))
+            {
+                anos--;
+            }
 
             var listaDeErros = new List<ValidationResult>();
 
@@ -72,7 +81,7 @@ namespace locadora_de_jogos
             }
 
             clienteGlobal = cliente;
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -117,9 +126,15 @@ namespace locadora_de_jogos
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (anos < 18)
+            {
+                MessageBox.Show("Somente pessoas acima de 18 anos podem criar uma conta.");
+                return;
+            }
             Random aleatorio = new Random();
             DateTime dataAtual = DateTime.Now;
             clienteGlobal.DataCadastro = DateTime.Now;
+            clienteGlobal.DataNascimento = dtNascimento.Value;
             string identificador;
             do
             {

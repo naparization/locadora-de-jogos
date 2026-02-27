@@ -23,7 +23,8 @@ namespace locadora_de_jogos.Repositores
                     Email,
                     Telefone,
                     DataCadastro,
-                    IdentificadorUnico
+                    IdentificadorUnico,
+                    DataNascimento
                   FROM
                    Usuarios
                 ");
@@ -35,8 +36,8 @@ namespace locadora_de_jogos.Repositores
         {
             bancoDeDados.CriarConexao().QueryAsync<Cliente>(
                 @"
-                    INSERT INTO Usuarios (Nome, CPF, Genero, Email, Telefone, DataCadastro, IdentificadorUnico)
-                    VALUES (@Nome, @CPF, @Genero, @Email, @Telefone, @DataCadastro, @IdentificadorUnico);
+                    INSERT INTO Usuarios (Nome, CPF, Genero, Email, Telefone, DataCadastro, IdentificadorUnico, DataNascimento)
+                    VALUES (@Nome, @CPF, @Genero, @Email, @Telefone, @DataCadastro, @IdentificadorUnico, @DataNascimento);
                 ", cliente);
         }
 
@@ -52,7 +53,8 @@ namespace locadora_de_jogos.Repositores
                         Email,
                         Telefone,
                         DataCadastro,
-                        IdentificadorUnico
+                        IdentificadorUnico,
+                        DataNascimento
                 FROM
                     Usuarios
                 WHERE
@@ -75,7 +77,8 @@ namespace locadora_de_jogos.Repositores
                         Email,
                         Telefone,
                         DataCadastro,
-                        IdentificadorUnico
+                        IdentificadorUnico,
+                        DataNascimento
                 FROM
                     Usuarios
                 WHERE

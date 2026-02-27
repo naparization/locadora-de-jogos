@@ -46,6 +46,8 @@
             txtErro = new Label();
             txtDDD = new TextBox();
             label6 = new Label();
+            label7 = new Label();
+            dtNascimento = new DateTimePicker();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -173,7 +175,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(55, 237);
+            label5.Location = new Point(55, 284);
             label5.Name = "label5";
             label5.Size = new Size(67, 21);
             label5.TabIndex = 11;
@@ -181,7 +183,7 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(58, 261);
+            txtTelefone.Location = new Point(58, 308);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.PlaceholderText = "0 0000-0000";
             txtTelefone.Size = new Size(199, 23);
@@ -189,7 +191,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(11, 296);
+            btnSalvar.Location = new Point(11, 343);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(120, 58);
             btnSalvar.TabIndex = 13;
@@ -199,7 +201,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(137, 296);
+            btnCancelar.Location = new Point(137, 343);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 58);
             btnCancelar.TabIndex = 14;
@@ -210,14 +212,14 @@
             // 
             txtErro.AutoSize = true;
             txtErro.ForeColor = Color.Red;
-            txtErro.Location = new Point(5, 359);
+            txtErro.Location = new Point(5, 406);
             txtErro.Name = "txtErro";
             txtErro.Size = new Size(0, 15);
             txtErro.TabIndex = 15;
             // 
             // txtDDD
             // 
-            txtDDD.Location = new Point(10, 261);
+            txtDDD.Location = new Point(10, 308);
             txtDDD.Name = "txtDDD";
             txtDDD.PlaceholderText = "+ 00";
             txtDDD.Size = new Size(39, 23);
@@ -228,11 +230,29 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(5, 237);
+            label6.Location = new Point(5, 284);
             label6.Name = "label6";
             label6.Size = new Size(43, 21);
             label6.TabIndex = 17;
             label6.Text = "DDD";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(14, 227);
+            label7.Name = "label7";
+            label7.Size = new Size(147, 21);
+            label7.TabIndex = 18;
+            label7.Text = "Data de nascimento";
+            // 
+            // dtNascimento
+            // 
+            dtNascimento.Location = new Point(12, 254);
+            dtNascimento.Name = "dtNascimento";
+            dtNascimento.Size = new Size(245, 23);
+            dtNascimento.TabIndex = 19;
             // 
             // CadastroUsuarios
             // 
@@ -240,6 +260,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(269, 465);
+            Controls.Add(dtNascimento);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(txtDDD);
             Controls.Add(txtErro);
@@ -282,5 +304,7 @@
         private Label txtErro;
         private TextBox txtDDD;
         private Label label6;
+        private Label label7;
+        private DateTimePicker dtNascimento;
     }
 }

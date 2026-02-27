@@ -161,17 +161,11 @@ namespace locadora_de_jogos
                 }
             } else
             {
+
                 int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                var jogoAlugado = await RegistroRepository.BuscarPorId(idRegistro);
-                DateTime dataAtual = DateTime.Now;
-                if (jogoAlugado.DataDevolucao < dataAtual)
-                {
-                    TimeSpan diasDeDiferenca = dataAtual - jogoAlugado.DataDevolucao;
-
-                    int diasDeMulta = diasDeDiferenca.Days;
-
-                    
-                }
+                
+                var calculoAluguel = new CalculoAluguel(idRegistro, this);
+                calculoAluguel.ShowDialog();
             }
         }
 

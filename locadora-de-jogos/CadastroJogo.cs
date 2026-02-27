@@ -28,11 +28,11 @@ namespace locadora_de_jogos
 
         public CadastroJogo(TelaInicial telaInicial)
         {
+            this.telaInicial = telaInicial;
 
             InitializeComponent();
             IniciarTimer();
 
-            this.telaInicial = telaInicial;
         }
 
         private void IniciarTimer()

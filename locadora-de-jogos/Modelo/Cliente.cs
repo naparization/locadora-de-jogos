@@ -27,6 +27,8 @@ namespace GerenciamentoDeFuncionarios.Modelo
 
         public DateTime DataCadastro { get; set; } 
 
+        public DateTime DataNascimento { get; set; }
+
         public string IdentificadorUnico { get; set; }
     }
 }

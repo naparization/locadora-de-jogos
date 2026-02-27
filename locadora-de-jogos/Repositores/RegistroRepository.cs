@@ -43,7 +43,24 @@ namespace locadora_de_jogos.Repositores
                 @"
                     SELECT
                         Id,
+                        IdJogo,
                         DataDevolucao
+                FROM
+                    Registros
+                WHERE
+                    Id = @Id
+                ", new { Id = idRegistro });
+
+            return registro;
+        }
+
+        public static async Task<Registro> BuscarPorIdDoJogo(int idRegistro)
+        {
+            var registro = await bancoDeDados.CriarConexao()
+                .QueryFirstOrDefaultAsync<Registro>(
+                @"
+                    SELECT
+                        IdJogo as Id
                 FROM
                     Registros
                 WHERE
@@ -95,7 +112,6 @@ namespace locadora_de_jogos.Repositores
                     DELETE FROM Registros
                     WHERE id = @Id
                 ", new { Id = idRegistro });
-                MessageBox.Show($"Registrado deletado com sucesso.", "Excluir registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception)
             {
