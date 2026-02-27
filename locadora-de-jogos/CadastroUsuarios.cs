@@ -120,11 +120,23 @@ namespace locadora_de_jogos
             Random aleatorio = new Random();
             DateTime dataAtual = DateTime.Now;
             clienteGlobal.DataCadastro = DateTime.Now;
-            string identificador = clienteGlobal.Nome.Substring(0, 2);
-            identificador = identificador + "-" + clienteGlobal.CPF.Substring(0,3);
-            identificador = identificador + "-" + dataAtual.Month.ToString();
+            string identificador;
+            do
+            {
+                identificador = clienteGlobal.Nome.Substring(0, 2);
+                identificador = identificador + "-" + clienteGlobal.CPF.Substring(3, 3);
+                identificador = identificador + "-" + aleatorio.Next(1000, 9999);
+            } while (await RegistroRepository.BuscarPorIdentificador(identificador) == null);
             clienteGlobal.IdentificadorUnico = identificador;
-            ClienteRepository.Adicionar(clienteGlobal);
+            try
+            {
+                ClienteRepository.Adicionar(clienteGlobal);
+            } catch (Exception)
+            {
+                //
+                return;
+            }
+            
             await telaInicial.AtualizarTabela();
             this.Close();
         }

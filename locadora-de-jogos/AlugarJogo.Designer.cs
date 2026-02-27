@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             txtNomeJogo = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtRetirarada = new DateTimePicker();
             label2 = new Label();
             btnSalvar = new Button();
             button1 = new Button();
@@ -40,18 +40,19 @@
             txtNomeJogo.AutoSize = true;
             txtNomeJogo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNomeJogo.ForeColor = Color.White;
-            txtNomeJogo.Location = new Point(12, 19);
+            txtNomeJogo.Location = new Point(68, 5);
             txtNomeJogo.Name = "txtNomeJogo";
             txtNomeJogo.Size = new Size(270, 20);
             txtNomeJogo.TabIndex = 0;
             txtNomeJogo.Text = "Deseja alugar o jogo \"Nome do Jogo\"?";
             // 
-            // dateTimePicker1
+            // dtRetirarada
             // 
-            dateTimePicker1.Location = new Point(20, 71);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(246, 23);
-            dateTimePicker1.TabIndex = 1;
+            dtRetirarada.Location = new Point(20, 71);
+            dtRetirarada.Name = "dtRetirarada";
+            dtRetirarada.Size = new Size(246, 23);
+            dtRetirarada.TabIndex = 1;
+            dtRetirarada.ValueChanged += dtRetirarada_ValueChanged;
             // 
             // label2
             // 
@@ -95,7 +96,7 @@
             Controls.Add(button1);
             Controls.Add(btnSalvar);
             Controls.Add(label2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtRetirarada);
             Controls.Add(txtNomeJogo);
             Name = "AlugarJogo";
             Text = "Alugar Jogo";
@@ -106,7 +107,7 @@
         #endregion
 
         private Label txtNomeJogo;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtRetirarada;
         private Label label2;
         private Button btnSalvar;
         private Button button1;

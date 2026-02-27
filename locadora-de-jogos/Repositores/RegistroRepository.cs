@@ -68,7 +68,7 @@ namespace locadora_de_jogos.Repositores
                     INNER JOIN Usuarios U ON R.IdUsuario = U.Id
                     INNER JOIN Jogos J ON R.IdJogo = J.Id
                     WHERE U.IdentificadorUnico = @IdentificadorUnico;
-                ", new {IdentificadorUnico = identificador});
+                ", new { IdentificadorUnico = identificador });
             return registro;
         }
 
@@ -102,5 +102,29 @@ namespace locadora_de_jogos.Repositores
                 return;
             }
         }
+
+        internal static async Task<Registro> VerificarDisponibilidade(int idJogo, DateTime dataRetirada, DateTime dataDevolucao)
+        {
+            
+            var disponibilidade = await bancoDeDados.CriarConexao().QueryFirstOrDefaultAsync<Registro>(
+                @"
+        SELECT *
+        FROM Registros
+        WHERE IdJogo = @IdJogo
+        AND DataAluguel <= @DataDevolucao
+        AND DataDevolucao >= @DataRetirada;
+        ",
+        new
+        {
+            IdJogo = idJogo,
+            DataRetirada = dataRetirada,
+            DataDevolucao = dataDevolucao
+        });
+            return disponibilidade;
+
+            
+        }
+
+
     }
 }
