@@ -171,27 +171,38 @@ namespace locadora_de_jogos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            switch (option) {
-                case 0:
-                    int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                    var atualizarJogo = new AtualizarJogo(idJogo, this);
-                    atualizarJogo.ShowDialog();
+            if (dgvDados.SelectedRows[0].Cells[0].Value == null)
+            {
+                return;
+            }
+            try
+            {
+                switch (option)
+                {
+                    case 0:
+                        int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                        var atualizarJogo = new AtualizarJogo(idJogo, this);
+                        atualizarJogo.ShowDialog();
+                        break;
+                    case 1:
+                        int idUsuario = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                        var atualizarUsuario = new AtualizarUsuario(idUsuario, this);
+                        atualizarUsuario.ShowDialog();
+                        break;
+                    case 2:
+                        int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
+                        var atualizarRegistro = new AtualizarRegistro(idRegistro, this);
+                        atualizarRegistro.ShowDialog();
+                        break;
+                    default:
+                        break;
 
-                    break;
-                case 1:
-                    int idUsuario = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                    var atualizarUsuario = new AtualizarUsuario(idUsuario, this);
-                    atualizarUsuario.ShowDialog();
-                    break;
-                case 2:
-                    int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                    var atualizarRegistro = new AtualizarRegistro(idRegistro, this);
-                    atualizarRegistro.ShowDialog();
-                    break;
-                default: 
-                    break;
-
-            } 
+                }
+            } catch (Exception)
+            {
+                return;
+            }
+            
         }
 
         private void btnNovoAlugar_Click(object sender, EventArgs e)

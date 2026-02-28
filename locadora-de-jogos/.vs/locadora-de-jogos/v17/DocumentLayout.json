@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\loginusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:loginusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\loginadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:loginadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\alugarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:alugarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\atualizarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:atualizarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\calculoaluguel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:calculoaluguel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:alugarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\alugarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:alugarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\repositores\\registrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:repositores\\registrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\modelo\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\alugarjogo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:alugarjogo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\locadora-de-jogos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -49,14 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\cadastrojogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:cadastrojogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:cadastrousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\repositores\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,16 +87,8 @@
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:cadastroregistros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\loginusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:loginusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\loginadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:loginadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\atualizarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -93,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\atualizarregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:atualizarregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\atualizarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|solutionrelative:atualizarjogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD92F1DC-9CDD-477E-BABF-4B62B93E5815}|locadora-de-jogos.csproj|c:\\users\\pedronapardeoliveira\\desktop\\locadora-de-jogos\\locadora-de-jogos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -206,33 +206,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CalculoAluguel.cs",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs",
-              "RelativeDocumentMoniker": "CalculoAluguel.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs",
-              "RelativeToolTip": "CalculoAluguel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAIA6wDMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T22:45:12.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CalculoAluguel.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs",
-              "RelativeDocumentMoniker": "CalculoAluguel.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs [Projeto]",
-              "RelativeToolTip": "CalculoAluguel.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T22:34:11.641Z",
-              "EditorCaption": " [Projeto]"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 5,
@@ -241,52 +216,14 @@
               "RelativeDocumentMoniker": "TelaInicial.cs",
               "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\TelaInicial.cs",
               "RelativeToolTip": "TelaInicial.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAADwv6cAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACEBAAAAAAAAAIAwwLgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T00:42:42.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TelaInicial.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\TelaInicial.cs",
-              "RelativeDocumentMoniker": "TelaInicial.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\TelaInicial.cs [Projeto]",
-              "RelativeToolTip": "TelaInicial.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T22:08:13.425Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RegistroRepository.cs",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Repositores\\RegistroRepository.cs",
-              "RelativeDocumentMoniker": "Repositores\\RegistroRepository.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Repositores\\RegistroRepository.cs",
-              "RelativeToolTip": "Repositores\\RegistroRepository.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAqwHEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T23:12:34.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AlugarJogo.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.Designer.cs",
-              "RelativeDocumentMoniker": "AlugarJogo.Designer.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.Designer.cs",
-              "RelativeToolTip": "AlugarJogo.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T22:53:20.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AlugarJogo.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.cs",
               "RelativeDocumentMoniker": "AlugarJogo.cs",
@@ -298,20 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AlugarJogo.cs",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.cs",
-              "RelativeDocumentMoniker": "AlugarJogo.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.cs",
-              "RelativeToolTip": "AlugarJogo.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAjwC4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T00:14:00.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Registro.cs",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Modelo\\Registro.cs",
               "RelativeDocumentMoniker": "Modelo\\Registro.cs",
@@ -324,7 +248,144 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AtualizarJogo.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AtualizarJogo.cs",
+              "RelativeDocumentMoniker": "AtualizarJogo.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AtualizarJogo.cs [Projeto]",
+              "RelativeToolTip": "AtualizarJogo.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T23:59:35.773Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginUsuario.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginUsuario.cs",
+              "RelativeDocumentMoniker": "LoginUsuario.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginUsuario.cs [Projeto]",
+              "RelativeToolTip": "LoginUsuario.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T00:18:17.63Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginAdministrador.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginAdministrador.cs",
+              "RelativeDocumentMoniker": "LoginAdministrador.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginAdministrador.cs [Projeto]",
+              "RelativeToolTip": "LoginAdministrador.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T23:30:54.415Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastroUsuarios.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs",
+              "RelativeDocumentMoniker": "CadastroUsuarios.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs [Projeto]",
+              "RelativeToolTip": "CadastroUsuarios.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T00:37:15.232Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CadastroUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs",
+              "RelativeDocumentMoniker": "CadastroUsuarios.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs",
+              "RelativeToolTip": "CadastroUsuarios.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAArwIgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T00:07:11.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "AlugarJogo.cs",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.cs",
+              "RelativeDocumentMoniker": "AlugarJogo.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.cs",
+              "RelativeToolTip": "AlugarJogo.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAjwC4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T00:14:00.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AlugarJogo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.Designer.cs",
+              "RelativeDocumentMoniker": "AlugarJogo.Designer.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AlugarJogo.Designer.cs",
+              "RelativeToolTip": "AlugarJogo.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T22:53:20.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegistroRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Repositores\\RegistroRepository.cs",
+              "RelativeDocumentMoniker": "Repositores\\RegistroRepository.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Repositores\\RegistroRepository.cs",
+              "RelativeToolTip": "Repositores\\RegistroRepository.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAqwHEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T23:12:34.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TelaInicial.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\TelaInicial.cs",
+              "RelativeDocumentMoniker": "TelaInicial.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\TelaInicial.cs [Projeto]",
+              "RelativeToolTip": "TelaInicial.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T22:08:13.425Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CalculoAluguel.cs",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs",
+              "RelativeDocumentMoniker": "CalculoAluguel.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs",
+              "RelativeToolTip": "CalculoAluguel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T22:45:12.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CalculoAluguel.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs",
+              "RelativeDocumentMoniker": "CalculoAluguel.cs",
+              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CalculoAluguel.cs [Projeto]",
+              "RelativeToolTip": "CalculoAluguel.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T22:34:11.641Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "CadastroJogo.cs",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroJogo.cs",
               "RelativeDocumentMoniker": "CadastroJogo.cs",
@@ -337,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "CadastroJogo.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroJogo.cs",
               "RelativeDocumentMoniker": "CadastroJogo.cs",
@@ -349,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Repositores\\ClienteRepository.cs",
               "RelativeDocumentMoniker": "Repositores\\ClienteRepository.cs",
@@ -362,32 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CadastroUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs",
-              "RelativeDocumentMoniker": "CadastroUsuarios.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs",
-              "RelativeToolTip": "CadastroUsuarios.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAkwIAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T00:07:11.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CadastroUsuarios.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs",
-              "RelativeDocumentMoniker": "CadastroUsuarios.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroUsuarios.cs [Projeto]",
-              "RelativeToolTip": "CadastroUsuarios.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T00:37:15.232Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "locadora-de-jogos.csproj",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\locadora-de-jogos.csproj",
               "RelativeDocumentMoniker": "locadora-de-jogos.csproj",
@@ -400,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Modelo\\Cliente.cs",
               "RelativeDocumentMoniker": "Modelo\\Cliente.cs",
@@ -413,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CategoriaJogo.cs",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\Modelo\\CategoriaJogo.cs",
               "RelativeDocumentMoniker": "Modelo\\CategoriaJogo.cs",
@@ -425,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "CadastroRegistros.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\CadastroRegistros.cs",
               "RelativeDocumentMoniker": "CadastroRegistros.cs",
@@ -436,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "TelaLogin.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\TelaLogin.cs",
               "RelativeDocumentMoniker": "TelaLogin.cs",
@@ -447,29 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LoginUsuario.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginUsuario.cs",
-              "RelativeDocumentMoniker": "LoginUsuario.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginUsuario.cs [Projeto]",
-              "RelativeToolTip": "LoginUsuario.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T00:18:17.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginAdministrador.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginAdministrador.cs",
-              "RelativeDocumentMoniker": "LoginAdministrador.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\LoginAdministrador.cs [Projeto]",
-              "RelativeToolTip": "LoginAdministrador.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T23:30:54.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "AtualizarUsuario.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AtualizarUsuario.cs",
               "RelativeDocumentMoniker": "AtualizarUsuario.cs",
@@ -480,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AtualizarRegistro.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AtualizarRegistro.cs",
               "RelativeDocumentMoniker": "AtualizarRegistro.cs",
@@ -488,17 +502,6 @@
               "RelativeToolTip": "AtualizarRegistro.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-24T22:48:50.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AtualizarJogo.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AtualizarJogo.cs",
-              "RelativeDocumentMoniker": "AtualizarJogo.cs",
-              "ToolTip": "C:\\Users\\PEDRONAPARDEOLIVEIRA\\Desktop\\locadora-de-jogos\\locadora-de-jogos\\AtualizarJogo.cs [Projeto]",
-              "RelativeToolTip": "AtualizarJogo.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T23:59:35.773Z"
             },
             {
               "$type": "Document",
@@ -582,7 +585,8 @@
               "RelativeToolTip": "AtualizarJogo.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T22:10:38.637Z"
+              "WhenOpened": "2026-02-23T22:10:38.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -741,7 +745,8 @@
               "RelativeToolTip": "LoginUsuario.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T00:23:03.276Z"
+              "WhenOpened": "2026-02-11T00:23:03.276Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -787,7 +792,8 @@
               "RelativeToolTip": "LoginAdministrador.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T23:58:15.294Z"
+              "WhenOpened": "2026-02-10T23:58:15.294Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
