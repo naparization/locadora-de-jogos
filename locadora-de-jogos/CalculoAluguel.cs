@@ -49,7 +49,7 @@ namespace locadora_de_jogos
                 txtMulta.Text = $"Atraso de {diasDeMulta} dia(s).";
 
                 int y = 1;
-                double valorextra = fatura * 0.5;
+                double valorextra = fatura * 0.05;
                 do
                 {
                     fatura = fatura + valorextra;
