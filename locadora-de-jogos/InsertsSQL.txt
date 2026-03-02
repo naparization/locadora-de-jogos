@@ -29,3 +29,19 @@ CREATE TABLE Registros (
     FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id),
     FOREIGN KEY (IdJogo) REFERENCES Jogos(Id)
 );
+
+INSERT INTO Usuarios (Nome, CPF, Genero, Email, Telefone, DataCadastro, IdentificadorUnico, DataNascimento)
+VALUES
+('Carlos Silva', '12345678901', 1, 'carlos.silva@email.com', '11999990001', '2025-01-10', 'Ca-456-8392', '1990-05-14'),
+('Mariana Souza', '98765432100', 2, 'mariana.souza@email.com', '11999990002', '2025-01-12', 'Ma-654-2741', '1995-08-22'),
+('Joao Pereira', '45678912345', 1, 'joao.pereira@email.com', '11999990003', '2025-01-15', 'Jo-789-5623', '1988-03-09'),
+('Fernanda Lima', '32165498700', 2, 'fernanda.lima@email.com', '11999990004', '2025-01-18', 'Fe-654-9184', '1992-11-30'),
+('Lucas Martins', '65412398765', 1, 'lucas.martins@email.com', '11999990005', '2025-01-20', 'Lu-123-4478', '1998-07-17');
+
+INSERT INTO Jogos (Titulo, IdGenero, Preco, Categoria, DataLancamento)
+VALUES
+('Shadow Strike', 1, 199.90, 3, '2023-03-10'),  -- Ação / Ouro
+('Legends of Arkania', 2, 149.90, 2, '2022-11-05'),  -- RPG / Prata
+('Warzone Elite', 3, 249.90, 3, '2024-06-21'),  -- Shooter / Ouro
+('Mystic Quest', 2, 99.90, 1, '2021-09-14'),  -- RPG / Bronze
+('Urban Combat', 1, 179.90, 2, '2023-12-01');  -- Ação / Prata
