@@ -34,8 +34,8 @@ namespace locadora_de_jogos
 
             Load += AtualizarUsuario_Load;
 
-            
-               
+
+
         }
 
         private void IniciarTimer()
@@ -90,7 +90,8 @@ namespace locadora_de_jogos
             txtCpf.Text = clienteEdicao.CPF;
             txtEmail.Text = clienteEdicao.Email;
 
-            switch(clienteEdicao.Genero){
+            switch (clienteEdicao.Genero)
+            {
                 case Genero.Masculino:
                     rbMasculino.Checked = true;
                     rbFeminino.Checked = false;
@@ -104,7 +105,7 @@ namespace locadora_de_jogos
                 case Genero.Outro:
                     rbOutro.Checked = true;
                     rbMasculino.Checked = false;
-                    rbFeminino.Checked= false;
+                    rbFeminino.Checked = false;
                     break;
                 default:
                     rbMasculino.Checked = false;
@@ -127,6 +128,11 @@ namespace locadora_de_jogos
             clienteGlobal.Id = idUsuario;
             await ClienteRepository.AtualizarPorId(clienteGlobal);
             await telaInicial.AtualizarTabela();
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

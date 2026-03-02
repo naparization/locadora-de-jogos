@@ -22,21 +22,25 @@ namespace locadora_de_jogos
         public byte option;
         public TelaInicial(bool isAdmin, string idUsuario)
         {
-            
+
             this.isAdmin = isAdmin;
             this.idUsuario = idUsuario;
             this.option = 0;
-                InitializeComponent();
+            InitializeComponent();
             // botão multifuncional, caso seja Admin o layout é Novo/Editar/Excluir
             // caso seja usuário padrão então Alugar/Editar/Devoler
             // botão devolver muda de vermelho para uma cor lavanda, pois é menos ameaçador
             // devolver o livro é algo bom, não queremos desencorajar o cliente :3
+            txtFiltro.Visible = false;
+            btnFiltrar.Visible = false;
             if (isAdmin)
             {
                 btnNovoAlugar.Text = "Novo";
-                
+
+
                 btnExcluirDevolver.Text = "Excluir";
-            } else
+            }
+            else
             {
                 btnNovoAlugar.Text = "Alugar";
                 btnExcluirDevolver.BackColor = Color.Gray;
@@ -57,7 +61,7 @@ namespace locadora_de_jogos
 
         public async Task AtualizarTabela()
         {
-            
+
             dgvDados.Rows.Clear();
             switch (option)
             {
@@ -70,7 +74,8 @@ namespace locadora_de_jogos
                     {
                         var clientes = await ClienteRepository.ObterClientes();
                         dgvDados.DataSource = new BindingList<Cliente>(clientes.ToList());
-                    } else
+                    }
+                    else
                     {
                         var cliente = await ClienteRepository.BuscarPorIdentificador(idUsuario);
                         dgvDados.DataSource = new BindingList<Cliente> { cliente };
@@ -83,21 +88,22 @@ namespace locadora_de_jogos
                     {
                         var registros = await RegistroRepository.ObterRegistros();
                         dgvDados.DataSource = new BindingList<Registro>(registros.ToList());
-                    } else
+                    }
+                    else
                     {
                         var registros = await RegistroRepository.BuscarPorIdentificador(idUsuario);
                         dgvDados.DataSource = new BindingList<Registro>(registros.ToList());
                     }
 
-                        break;
+                    break;
                 default:
                     // deu errado
                     var padrao = await JogoRepository.ObterJogos();
                     dgvDados.DataSource = new BindingList<Jogo>(padrao.ToList());
                     break;
             }
-                
-            
+
+
 
         }
 
@@ -111,9 +117,9 @@ namespace locadora_de_jogos
                 {
                     return;
                 }
-                        string tabelaNome = tabela.ToString();
+                string tabelaNome = tabela.ToString();
 
-                
+
                 switch (option)
                 {
 
@@ -126,7 +132,7 @@ namespace locadora_de_jogos
                             int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
                             await JogoRepository.DeletarJogo(idJogo);
                             await AtualizarTabela();
-                            
+
                         }
                         break;
                     case 1:
@@ -159,12 +165,18 @@ namespace locadora_de_jogos
                         }
                         break;
                 }
-            } else
+            }
+            else
             {
 
-                int idRegistro = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-                
-                var calculoAluguel = new CalculoAluguel(idRegistro, this);
+                var idRegistro = dgvDados.SelectedRows[0].Cells[0].Value;
+
+                if (idRegistro == null)
+                {
+                    return;
+                }
+                int idRegistroInt = (int)idRegistro;
+                var calculoAluguel = new CalculoAluguel(idRegistroInt, this);
                 calculoAluguel.ShowDialog();
             }
         }
@@ -198,11 +210,12 @@ namespace locadora_de_jogos
                         break;
 
                 }
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 return;
             }
-            
+
         }
 
         private void btnNovoAlugar_Click(object sender, EventArgs e)
@@ -216,7 +229,7 @@ namespace locadora_de_jogos
                     // 1 = Usuários
                     // 2 = Registros
                     case 0:
-                       
+
                         var cadastroJogos = new CadastroJogo(this);
                         this.Hide();
                         cadastroJogos.ShowDialog();
@@ -241,17 +254,17 @@ namespace locadora_de_jogos
                         break;
                 }
                 return;
-            } 
+            }
             // código do usuário padrão 
             int idJogo = (int)dgvDados.SelectedRows[0].Cells[0].Value;
-             
+
             var alugarJogo = new AlugarJogo(idJogo, idUsuario, this);
             alugarJogo.ShowDialog();
         }
 
         private async void btnRegistro_Click(object sender, EventArgs e)
         {
-            
+
             this.option = 2;
             await AtualizarTabela();
             if (!isAdmin)
@@ -261,7 +274,12 @@ namespace locadora_de_jogos
                 btnEditar.Enabled = false;
                 btnEditar.BackColor = Color.Gray;
                 btnExcluirDevolver.Enabled = true;
-                btnExcluirDevolver.BackColor = Color.FromArgb(225, 156 , 255);
+                btnExcluirDevolver.BackColor = Color.FromArgb(225, 156, 255);
+            }
+            else
+            {
+                btnFiltrar.Visible = false;
+                txtFiltro.Visible = false;
             }
         }
 
@@ -273,10 +291,15 @@ namespace locadora_de_jogos
             {
                 btnNovoAlugar.Enabled = false;
                 btnNovoAlugar.BackColor = Color.Gray;
-                btnEditar.Enabled= true;
+                btnEditar.Enabled = true;
                 btnEditar.BackColor = Color.FromArgb(255, 255, 192);
-                btnExcluirDevolver.Enabled= false;
+                btnExcluirDevolver.Enabled = false;
                 btnExcluirDevolver.BackColor = Color.Gray;
+            }
+            else
+            {
+                btnFiltrar.Visible = true;
+                txtFiltro.Visible = true;
             }
         }
 
@@ -292,6 +315,27 @@ namespace locadora_de_jogos
                 btnEditar.BackColor = Color.Gray;
                 btnExcluirDevolver.Enabled = false;
                 btnExcluirDevolver.BackColor = Color.Gray;
+            }
+            else
+            {
+                btnFiltrar.Visible = false;
+                txtFiltro.Visible = false;
+            }
+        }
+
+        private async void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            dgvDados.Rows.Clear();
+            string CPF = txtFiltro.Text.Replace("-", "").Replace(".", "");
+
+            
+
+            var cliente = await ClienteRepository.BuscarPorCPF(CPF);
+            dgvDados.DataSource = new BindingList<Cliente> { cliente };
+            if (cliente == null)
+            {
+                MessageBox.Show("Usuário não encontrado.", "Erro ao filtrar", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                await this.AtualizarTabela();
             }
         }
     }

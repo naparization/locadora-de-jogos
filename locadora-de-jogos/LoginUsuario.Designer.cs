@@ -55,9 +55,9 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(44, 93);
+            btnEntrar.Location = new Point(32, 93);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(75, 23);
+            btnEntrar.Size = new Size(100, 23);
             btnEntrar.TabIndex = 4;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;

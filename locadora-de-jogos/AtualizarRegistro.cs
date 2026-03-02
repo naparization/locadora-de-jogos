@@ -44,5 +44,10 @@ namespace locadora_de_jogos
             this.Close();
             MessageBox.Show($"Data do registro movida para {dtDataRegistro.Value}.");
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

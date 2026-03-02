@@ -36,6 +36,8 @@
             btnEditar = new Button();
             btnExcluirDevolver = new Button();
             btnRegistros = new Button();
+            txtFiltro = new TextBox();
+            btnFiltrar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -122,12 +124,32 @@
             btnRegistros.UseVisualStyleBackColor = true;
             btnRegistros.Click += btnRegistro_Click;
             // 
+            // txtFiltro
+            // 
+            txtFiltro.Location = new Point(514, 36);
+            txtFiltro.Name = "txtFiltro";
+            txtFiltro.PlaceholderText = "000.000.000-00";
+            txtFiltro.Size = new Size(82, 23);
+            txtFiltro.TabIndex = 8;
+            // 
+            // btnFiltrar
+            // 
+            btnFiltrar.Location = new Point(602, 36);
+            btnFiltrar.Name = "btnFiltrar";
+            btnFiltrar.Size = new Size(25, 23);
+            btnFiltrar.TabIndex = 9;
+            btnFiltrar.Text = "?";
+            btnFiltrar.UseVisualStyleBackColor = true;
+            btnFiltrar.Click += btnFiltrar_Click;
+            // 
             // TelaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(644, 450);
+            Controls.Add(btnFiltrar);
+            Controls.Add(txtFiltro);
             Controls.Add(btnRegistros);
             Controls.Add(btnExcluirDevolver);
             Controls.Add(btnEditar);
@@ -141,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvDados).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -153,5 +176,7 @@
         private Button btnEditar;
         private Button btnExcluirDevolver;
         private Button btnRegistros;
+        private TextBox txtFiltro;
+        private Button btnFiltrar;
     }
 }

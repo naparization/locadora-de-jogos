@@ -120,5 +120,31 @@ namespace locadora_de_jogos.Repositores
                 return;
             }
         }
+
+        internal static async Task<Cliente> BuscarPorCPF(string CPF)
+        {
+            var cliente = await bancoDeDados.CriarConexao()
+               .QueryFirstOrDefaultAsync<Cliente>(
+               @"
+                    SELECT
+                        Id,
+                        Nome,
+                        CPF,
+                        Genero,
+                        Email,
+                        Telefone,
+                        DataCadastro,
+                        IdentificadorUnico,
+                        DataNascimento
+                FROM
+                    Usuarios
+                WHERE
+                    CPF = @CPF
+                ", new { CPF = CPF });
+
+            return cliente;
+        }
     }
+    
 }
+

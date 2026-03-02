@@ -76,7 +76,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(192, 255, 192);
-            button1.Location = new Point(38, 72);
+            button1.Location = new Point(40, 72);
             button1.Name = "button1";
             button1.Size = new Size(128, 63);
             button1.TabIndex = 3;
