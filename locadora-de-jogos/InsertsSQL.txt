@@ -1,0 +1,31 @@
+﻿CREATE TABLE Usuarios (
+    Id INT PRIMARY KEY IDENTITY(1, 1),
+    Nome NVARCHAR(100) NOT NULL,
+	CPF NVARCHAR (11) NOT NULL,
+	Genero INT NOT NULL,
+    Email NVARCHAR(150) NOT NULL UNIQUE,
+    Telefone NVARCHAR(20),
+    DataCadastro DATE NOT NULL,
+    IdentificadorUnico NVARCHAR(100) NOT NULL,
+	DataNascimento DATE NOT NULL
+);
+
+CREATE TABLE Jogos (
+    Id INT PRIMARY KEY IDENTITY(1, 1),
+    Titulo NVARCHAR(150) NOT NULL,
+    IdGenero INT NOT NULL,
+    Preco DECIMAL(10,2) NOT NULL,
+	Categoria INT NOT NULL,
+    DataLancamento DATE NOT NULL,
+);
+
+CREATE TABLE Registros (
+    Id INT PRIMARY KEY IDENTITY(1, 1),
+    IdUsuario INT NOT NULL,
+    IdJogo INT NOT NULL,
+    DataAluguel DATE NOT NULL,
+    DataDevolucao DATE NOT NULL,
+
+    FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id),
+    FOREIGN KEY (IdJogo) REFERENCES Jogos(Id)
+);
