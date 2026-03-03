@@ -358,9 +358,9 @@ namespace locadora_de_jogos
             if (atrasos == null) 
             {
                 MessageBox.Show("Nenhum atraso encontrado.", "Boas notícias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                await this.AtualizarTabela();
                 return;
             }
+            dgvDados.Rows.Clear();
             dgvDados.DataSource = new BindingList<Registro>(atrasos.ToList());
 
         }

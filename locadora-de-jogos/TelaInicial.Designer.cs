@@ -146,7 +146,7 @@
             // 
             // btnFiltrarAtrasos
             // 
-            btnFiltrarAtrasos.Location = new Point(514, 36);
+            btnFiltrarAtrasos.Location = new Point(512, 36);
             btnFiltrarAtrasos.Name = "btnFiltrarAtrasos";
             btnFiltrarAtrasos.Size = new Size(113, 23);
             btnFiltrarAtrasos.TabIndex = 10;
