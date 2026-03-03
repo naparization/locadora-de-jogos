@@ -38,6 +38,7 @@
             btnRegistros = new Button();
             txtFiltro = new TextBox();
             btnFiltrar = new Button();
+            btnFiltrarAtrasos = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -143,12 +144,23 @@
             btnFiltrar.UseVisualStyleBackColor = true;
             btnFiltrar.Click += btnFiltrar_Click;
             // 
+            // btnFiltrarAtrasos
+            // 
+            btnFiltrarAtrasos.Location = new Point(514, 36);
+            btnFiltrarAtrasos.Name = "btnFiltrarAtrasos";
+            btnFiltrarAtrasos.Size = new Size(113, 23);
+            btnFiltrarAtrasos.TabIndex = 10;
+            btnFiltrarAtrasos.Text = "Filtrar por atrasos";
+            btnFiltrarAtrasos.UseVisualStyleBackColor = true;
+            btnFiltrarAtrasos.Click += btnFiltrarAtrasos_Click;
+            // 
             // TelaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(644, 450);
+            Controls.Add(btnFiltrarAtrasos);
             Controls.Add(btnFiltrar);
             Controls.Add(txtFiltro);
             Controls.Add(btnRegistros);
@@ -179,5 +191,6 @@
         private Button btnRegistros;
         private TextBox txtFiltro;
         private Button btnFiltrar;
+        private Button btnFiltrarAtrasos;
     }
 }

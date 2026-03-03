@@ -1,4 +1,9 @@
-﻿using System;
+﻿using GerenciamentoDeFuncionarios.Modelo;
+using GerenciamentoDeJogos.Modelo;
+using GerenciamentoDeRegistros.Modelo;
+using locadora_de_jogos.Repositores;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +13,6 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GerenciamentoDeFuncionarios.Modelo;
-using GerenciamentoDeJogos.Modelo;
-using GerenciamentoDeRegistros.Modelo;
-using locadora_de_jogos.Repositores;
 
 namespace locadora_de_jogos
 {
@@ -33,6 +34,7 @@ namespace locadora_de_jogos
             // devolver o livro é algo bom, não queremos desencorajar o cliente :3
             txtFiltro.Visible = false;
             btnFiltrar.Visible = false;
+            btnFiltrarAtrasos.Visible = false;
             if (isAdmin)
             {
                 btnNovoAlugar.Text = "Novo";
@@ -279,6 +281,7 @@ namespace locadora_de_jogos
             else
             {
                 btnFiltrar.Visible = false;
+                btnFiltrarAtrasos.Visible = true;
                 txtFiltro.Visible = false;
             }
         }
@@ -299,6 +302,7 @@ namespace locadora_de_jogos
             else
             {
                 btnFiltrar.Visible = true;
+                btnFiltrarAtrasos.Visible = false;
                 txtFiltro.Visible = true;
             }
         }
@@ -319,6 +323,7 @@ namespace locadora_de_jogos
             else
             {
                 btnFiltrar.Visible = false;
+                btnFiltrarAtrasos.Visible = false;
                 txtFiltro.Visible = false;
             }
         }
@@ -335,7 +340,7 @@ namespace locadora_de_jogos
             txtFiltro.Text = "";
             if (cliente == null)
             {
-                
+
                 MessageBox.Show("Usuário não encontrado.", "Erro ao filtrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 await this.AtualizarTabela();
             }
@@ -343,6 +348,20 @@ namespace locadora_de_jogos
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private async void btnFiltrarAtrasos_Click(object sender, EventArgs e)
+        {
+            DateTime dia = DateTime.Now;
+            var atrasos = await RegistroRepository.ObterAtrasos(dia);
+            if (atrasos == null) 
+            {
+                MessageBox.Show("Nenhum atraso encontrado.", "Boas notícias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                await this.AtualizarTabela();
+                return;
+            }
+            dgvDados.DataSource = new BindingList<Registro>(atrasos.ToList());
 
         }
     }
