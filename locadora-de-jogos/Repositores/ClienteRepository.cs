@@ -64,6 +64,29 @@ namespace locadora_de_jogos.Repositores
             return cliente;
         }
 
+        public static async Task<Cliente> BuscarPorIdUnico(string identificadorUnico)
+        {
+            var cliente = await bancoDeDados.CriarConexao()
+                .QueryFirstOrDefaultAsync<Cliente>(
+                @"
+                    SELECT
+                        Nome,
+                        CPF,
+                        Genero,
+                        Email,
+                        Telefone,
+                        DataCadastro,
+                        IdentificadorUnico,
+                        DataNascimento
+                FROM
+                    Usuarios
+                WHERE
+                    WHERE IdentificadorUnico = @IdentificadorUnico;
+                ", new { IdentificadorUnico = identificadorUnico});
+
+            return cliente;
+        }
+
         public static async Task<Cliente> BuscarPorIdentificador(string idUsuario)
         {
             var cliente = await bancoDeDados.CriarConexao()
