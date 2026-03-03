@@ -332,9 +332,10 @@ namespace locadora_de_jogos
 
             var cliente = await ClienteRepository.BuscarPorCPF(CPF);
             dgvDados.DataSource = new BindingList<Cliente> { cliente };
+            txtFiltro.Text = "";
             if (cliente == null)
             {
-                txtFiltro.Text = "";
+                
                 MessageBox.Show("Usuário não encontrado.", "Erro ao filtrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 await this.AtualizarTabela();
             }
