@@ -328,15 +328,21 @@ namespace locadora_de_jogos
             dgvDados.Rows.Clear();
             string CPF = txtFiltro.Text.Replace("-", "").Replace(".", "");
 
-            
+
 
             var cliente = await ClienteRepository.BuscarPorCPF(CPF);
             dgvDados.DataSource = new BindingList<Cliente> { cliente };
             if (cliente == null)
             {
-                MessageBox.Show("Usuário não encontrado.", "Erro ao filtrar", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                txtFiltro.Text = "";
+                MessageBox.Show("Usuário não encontrado.", "Erro ao filtrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 await this.AtualizarTabela();
             }
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -131,6 +131,7 @@
             txtFiltro.PlaceholderText = "000.000.000-00";
             txtFiltro.Size = new Size(82, 23);
             txtFiltro.TabIndex = 8;
+            txtFiltro.TextChanged += txtFiltro_TextChanged;
             // 
             // btnFiltrar
             // 
