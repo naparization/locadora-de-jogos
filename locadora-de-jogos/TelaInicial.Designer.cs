@@ -148,7 +148,7 @@
             // 
             btnFiltrarAtrasos.Location = new Point(512, 36);
             btnFiltrarAtrasos.Name = "btnFiltrarAtrasos";
-            btnFiltrarAtrasos.Size = new Size(113, 23);
+            btnFiltrarAtrasos.Size = new Size(120, 23);
             btnFiltrarAtrasos.TabIndex = 10;
             btnFiltrarAtrasos.Text = "Filtrar por atrasos";
             btnFiltrarAtrasos.UseVisualStyleBackColor = true;

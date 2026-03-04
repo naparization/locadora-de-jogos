@@ -32,7 +32,6 @@ namespace locadora_de_jogos
             IniciarTimer();
             this.idUsuario = idUsuario;
             this.telaInicial = telaInicial;
-
             Load += AtualizarUsuario_Load;
 
 
@@ -95,7 +94,7 @@ namespace locadora_de_jogos
             this.clienteEdicao = await ClienteRepository.BuscarPorId(this.idUsuario);
 
             txtNomeUsuario.Text = clienteEdicao.Nome;
-            txtCpf.Text = clienteEdicao.CPF;
+            txtCpf.Text = Cpf.FormatarComPontuacao(clienteEdicao.CPF);
             txtEmail.Text = clienteEdicao.Email;
 
             switch (clienteEdicao.Genero)
