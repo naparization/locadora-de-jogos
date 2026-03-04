@@ -32,9 +32,9 @@ namespace locadora_de_jogos.Repositores
             return clientes;
         }
 
-        internal static void Adicionar(Cliente cliente)
+        internal static async Task Adicionar(Cliente cliente)
         {
-            bancoDeDados.CriarConexao().QueryAsync<Cliente>(
+            await bancoDeDados.CriarConexao().QueryAsync<Cliente>(
                 @"
                     INSERT INTO Usuarios (Nome, CPF, Genero, Email, Telefone, DataCadastro, IdentificadorUnico, DataNascimento)
                     VALUES (@Nome, @CPF, @Genero, @Email, @Telefone, @DataCadastro, @IdentificadorUnico, @DataNascimento);
@@ -60,6 +60,29 @@ namespace locadora_de_jogos.Repositores
                 WHERE
                     Id = @Id
                 ", new { Id = idUsuario });
+
+            return cliente;
+        }
+
+        public static async Task<Cliente> BuscarPorIdUnico(string identificadorUnico)
+        {
+            var cliente = await bancoDeDados.CriarConexao()
+                .QueryFirstOrDefaultAsync<Cliente>(
+                @"
+                    SELECT
+                        Nome,
+                        CPF,
+                        Genero,
+                        Email,
+                        Telefone,
+                        DataCadastro,
+                        IdentificadorUnico,
+                        DataNascimento
+                FROM
+                    Usuarios
+                WHERE
+                    WHERE IdentificadorUnico = @IdentificadorUnico;
+                ", new { IdentificadorUnico = identificadorUnico});
 
             return cliente;
         }

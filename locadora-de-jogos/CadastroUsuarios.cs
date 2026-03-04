@@ -53,6 +53,7 @@ namespace locadora_de_jogos
             DateTime dataAtual = DateTime.Now;
             var stringBuilder = new StringBuilder();
 
+
             anos = dataAtual.Year - cliente.DataNascimento.Year;
 
             if (dataAtual < cliente.DataNascimento.AddYears(anos))
@@ -138,20 +139,12 @@ namespace locadora_de_jogos
             string identificador;
             do
             {
-                identificador = clienteGlobal.Nome.Substring(0, 2);
-                identificador = identificador + "-" + clienteGlobal.CPF.Substring(3, 3);
+                identificador = clienteGlobal.Nome.Substring(0, 2);  
                 identificador = identificador + "-" + aleatorio.Next(1000, 9999);
-            } while (await RegistroRepository.BuscarPorIdentificador(identificador) == null);
+                identificador = identificador + $"-{dataAtual.Day}{dataAtual.Month}";
+            } while (await ClienteRepository.BuscarPorIdentificador(identificador) != null);
             clienteGlobal.IdentificadorUnico = identificador;
-            try
-            {
-                ClienteRepository.Adicionar(clienteGlobal);
-            } catch (Exception)
-            {
-                //
-                return;
-            }
-            
+            await ClienteRepository.Adicionar(clienteGlobal);
             await telaInicial.AtualizarTabela();
             this.Close();
         }

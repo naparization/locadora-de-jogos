@@ -42,7 +42,7 @@ namespace locadora_de_jogos.Repositores
                     INNER JOIN Usuarios U ON R.IdUsuario = U.Id
                     INNER JOIN Jogos J ON R.IdJogo = J.Id
                     WHERE DataDevolucao < @diaDeHoje;
-                ", new {dia = diaDeHoje});
+                ", new {diaDeHoje = diaDeHoje});
             return registro;
         }
 

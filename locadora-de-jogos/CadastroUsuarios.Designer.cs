@@ -58,7 +58,7 @@
             txtNomeUsuario.PlaceholderText = "Fulano De Tal";
             txtNomeUsuario.Size = new Size(245, 23);
             txtNomeUsuario.TabIndex = 2;
-            txtNomeUsuario.TextChanged += txtNomeJogo_TextChanged;
+            txtNomeUsuario.TextChanged += FazerValidacao;
             // 
             // label1
             // 
@@ -149,6 +149,7 @@
             txtEmail.PlaceholderText = "nome@dominio.com";
             txtEmail.Size = new Size(245, 23);
             txtEmail.TabIndex = 8;
+            txtEmail.TextChanged += FazerValidacao;
             // 
             // label4
             // 
@@ -168,7 +169,7 @@
             txtCpf.PlaceholderText = "000.000.000-00";
             txtCpf.Size = new Size(245, 23);
             txtCpf.TabIndex = 10;
-            txtCpf.TextChanged += textBox2_TextChanged;
+            txtCpf.TextChanged += FazerValidacao;
             // 
             // label5
             // 
@@ -188,6 +189,7 @@
             txtTelefone.PlaceholderText = "0 0000-0000";
             txtTelefone.Size = new Size(199, 23);
             txtTelefone.TabIndex = 12;
+            txtTelefone.TextChanged += FazerValidacao;
             // 
             // btnSalvar
             // 
@@ -224,6 +226,7 @@
             txtDDD.PlaceholderText = "+ 00";
             txtDDD.Size = new Size(39, 23);
             txtDDD.TabIndex = 16;
+            txtDDD.TextChanged += FazerValidacao;
             // 
             // label6
             // 
