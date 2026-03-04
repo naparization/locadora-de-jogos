@@ -56,9 +56,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Super_Jogos;
-            pictureBox1.Location = new Point(7, -22);
+            pictureBox1.Location = new Point(7, -26);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(399, 87);
+            pictureBox1.Size = new Size(399, 91);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -128,6 +128,7 @@
             // txtFiltro
             // 
             txtFiltro.Location = new Point(514, 36);
+            txtFiltro.MaxLength = 15;
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "000.000.000-00";
             txtFiltro.Size = new Size(82, 23);
