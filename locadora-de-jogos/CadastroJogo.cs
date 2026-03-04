@@ -102,7 +102,7 @@ namespace locadora_de_jogos
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            JogoRepository.Adicionar(jogoUniversal);
+            await JogoRepository.Adicionar(jogoUniversal);
             await telaInicial.AtualizarTabela();
             this.Close();
         }

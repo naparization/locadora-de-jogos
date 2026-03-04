@@ -29,7 +29,7 @@ namespace locadora_de_jogos.Repositores
             return jogos;
         }
 
-        public static async void Adicionar(Jogo jogo)
+        public static async Task Adicionar(Jogo jogo)
         {
             await bancoDeDados.CriarConexao().QueryAsync(
                 @"

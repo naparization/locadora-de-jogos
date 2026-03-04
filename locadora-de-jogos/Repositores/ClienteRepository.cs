@@ -32,9 +32,9 @@ namespace locadora_de_jogos.Repositores
             return clientes;
         }
 
-        internal static void Adicionar(Cliente cliente)
+        internal static async Task Adicionar(Cliente cliente)
         {
-            bancoDeDados.CriarConexao().QueryAsync<Cliente>(
+            await bancoDeDados.CriarConexao().QueryAsync<Cliente>(
                 @"
                     INSERT INTO Usuarios (Nome, CPF, Genero, Email, Telefone, DataCadastro, IdentificadorUnico, DataNascimento)
                     VALUES (@Nome, @CPF, @Genero, @Email, @Telefone, @DataCadastro, @IdentificadorUnico, @DataNascimento);
