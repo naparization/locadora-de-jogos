@@ -14,6 +14,7 @@ using locadora_de_jogos.Repositores;
 using locadora_de_jogos.Modelo;
 using Timer = System.Windows.Forms.Timer;
 using System.ComponentModel.DataAnnotations;
+using CpfCnpjLibrary;
 
 
 namespace locadora_de_jogos
@@ -60,6 +61,13 @@ namespace locadora_de_jogos
             var stringBuilder = new StringBuilder();
 
             var listaDeErros = new List<ValidationResult>();
+
+            bool CPFValido = Cpf.Validar(cliente.CPF);
+
+            if (!CPFValido)
+            {
+                listaDeErros.Add(new ValidationResult("o CPF precisa ser válido."));
+            }
 
             var contexto = new ValidationContext(cliente);
             Validator.TryValidateObject(cliente, contexto, listaDeErros, true);
