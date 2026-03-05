@@ -32,6 +32,8 @@ namespace locadora_de_jogos
 
             this.telaInicial = telaInicial;
             this.anos = 0;
+            dtNascimento.MinDate = new DateTime(1900, 1, 1);
+            dtNascimento.MaxDate = DateTime.Today;
         }
 
         private void IniciarTimer()
